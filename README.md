@@ -1,0 +1,1 @@
+# nostr-idol-project-website
