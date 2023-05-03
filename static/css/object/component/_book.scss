@@ -1,0 +1,145 @@
+@use "../../foundation/global" as *;
+
+.c-book-block {
+  max-width: 840px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+  @include bp(tab) {
+    max-width: 480px;
+    display: block;
+  }
+  &__cover {
+    max-width: 320px;
+    width: 35%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    @include bp(tab) {
+      width: 100%;
+      margin: 0 auto;
+    }
+    img {
+      width: 100%;
+      border: 1px solid #000;
+    }
+  }
+  &__info {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 50%;
+    @include bp(tab) {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  &__detail {
+    width: 100%;
+    @include bp(tab) {
+      margin-top: 40px;
+    }
+  }
+  &__share {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    img {
+      width: 32px;
+      transition: all 0.4s;
+      @include hover {
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+  &__title {
+    font-size: 2rem;
+    padding: 0;
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+}
+.c-book-event {
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  dt {
+    background-color: $c-secondary;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    margin: 0;
+  }
+  dd {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $c-secondary;
+    padding: 0;
+    margin: 0;
+  }
+}
+.c-book-price {
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  dt {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+  }
+  dd {
+    font-size: 1.75rem;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+  }
+}
+.c-book-online {
+  padding: 0;
+  margin-top: 40px;
+  &__head {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+  }
+  &__lineup {
+    margin: 10px 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    li {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  &__btn {
+    background-color: $c-primary;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.5em 1.5em;
+    display: inline-block;
+    border-radius: 1.2em;
+    transition: all 0.4s;
+    @include hover {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    &--disabled {
+      pointer-events: none;
+      background-color: #ccc;
+    }
+  }
+}

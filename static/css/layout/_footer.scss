@@ -1,0 +1,30 @@
+@use "../foundation/global" as *;
+
+.l-footer {
+  background-color: $c-primary;
+  padding: 20px 10px;
+}
+.l-footer-share {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  img {
+    width: 32px;
+    transition: all 0.4s;
+    @include hover {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+.l-footer-copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0;
+  padding: 0;
+  margin: 16px 0 0 0;
+}

@@ -1,0 +1,84 @@
+@use "global" as *;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: $text-primary;
+}
+
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+dl,
+dt,
+dd,
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, "Helvetica Neue", Arial,
+    sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-feature-settings: "palt";
+}
+
+.mincho {
+  font-family: 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", HGS明朝E, serif;
+}
+p {
+  line-height: 1.8em;
+  letter-spacing: 0.05em;
+}
+ul {
+  list-style: none;
+}
+
+/*-------- img hover ---------*/
+
+img {
+  border: none;
+}
+a:hover img {
+  opacity: 0.8;
+}
+
+/*----------------------------*/
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
+/*----------------------------*/
+
+.screen-reader {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
