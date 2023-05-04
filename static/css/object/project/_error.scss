@@ -1,0 +1,52 @@
+@use "../../foundation/global" as *;
+
+
+.p-error-content {
+  background-image: url(/images/about-bg.svg);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.p-error-content-body {
+  background-image: url(/images/about-content.svg);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 20px;
+  &__head {
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    margin: 0;
+  }
+  &__desc {
+    text-align: center;
+    color: #fff;
+    margin: 2rem 0 0;
+    span{
+      display: inline-block;
+    }
+  }
+  &__btn{
+    background-color: #fff;
+    color: $c-primary;
+    font-weight: 400;
+    font-family: "Anton", sans-serif;
+    padding: 0.3em 1.2em;
+    display: inline-block;
+    border-radius: 1.2em;
+    transition: all 0.4s;
+    @include hover{
+      &:hover{
+        transform: scale(1.2);
+      }
+    }
+  }
+}
