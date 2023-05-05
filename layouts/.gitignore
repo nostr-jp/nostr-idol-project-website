@@ -2,3 +2,5 @@
 !.gitignore
 !index.html
 !404.html
+!book
+!book/*
