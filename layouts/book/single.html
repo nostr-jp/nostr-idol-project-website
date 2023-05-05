@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:domain" content="FQDN">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Nostr Idol Project">
+  <meta property="og:title" content="{{.Title}} | Nostr Idol Project">
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/ogp.jpg">
+
+  <title>{{.Title}} | Nostr Idol Project</title>
+
+  <meta property="og:description" content="Nostrを愛し、楽しむ者たちのプロジェクト。技術書典14にて『Hello Nostr!先住民が教えるNostrの歩き方』を頒布します。">
+  <meta name="description" content="Nostrを愛し、楽しむ者たちのプロジェクト。技術書典14にて『Hello Nostr!先住民が教えるNostrの歩き方』を頒布します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.min.css" />
+</head>
+
+<body>
+  <div class="l-page-wrap">
+
+    <div class="l-sub-header">
+      <a href="/" class="l-sub-header__logo">
+      </a>
+
+      <div class="l-sub-header__nav">
+        <ol class="l-sub-header__breadcrumb">
+          <li><a href="#">ホーム</a></li>
+          <li>{{.Title}}</li>
+        </ol>
+      </div>
+
+    </div>
+
+    <div class="p-book-wrap">
+      <div class="c-book-block">
+        <div class="c-book-block__cover">
+          <img src="/images/cover/01.webp" alt="">
+        </div>
+        <div class="c-book-block__info">
+          <ul class="c-book-block__share">
+            <li><a href="https://twitter.com/intent/tweet?text={{ .Permalink }}" target="_blank"><img
+                  src="/images/icon-twitter.svg" alt="Twitterでシェア"></a></li>
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"><img
+                  src="/images/icon-facebook.svg" alt="Facebookでシェア"></a></li>
+          </ul>
+          <h1 class="c-book-block__title">
+            Hello Nostr!<br>
+            先住民が教えるNostrの歩き方
+          </h1>
+          <dl class="c-book-event">
+            <dt>
+              技術書典14
+            </dt>
+            <dd>
+              配置番号
+            </dd>
+          </dl>
+          <dl class="c-book-price">
+            <dt>
+              頒布価格
+            </dt>
+            <dd>
+              ￥XXXX
+            </dd>
+          </dl>
+          <div class="c-book-online">
+            <h4 class="c-book-online__head">オンライン</h4>
+            <ul class="c-book-online__lineup">
+              <li>
+                <a href="" target="_blank" rel="noopener" class="c-book-online__btn">
+                  技術書典マーケット
+                </a>
+              </li>
+              <li>
+                <a href="" target="_blank" rel="noopener" class="c-book-online__btn c-book-online__btn--disabled">
+                  BOOTH
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="c-book-block__detail">
+          <p class="c-book-caption">
+            Twitterがイーロン・マスクによって買収されたことにより、Twitterの仕様がかつてないほどの激動を見せており、存続を危ぶむ声を各所で耳にするようになりました。<br>
+            そこで、避難所として分散SNSの『Misskey』『Mastodon』『Bluesky』などが注目を浴びています。<br>
+            そんな中、ひときわ異彩を放つ分散SNSのプロトコルがNostrです。<br>
+            <br>
+            プロトコル？サービスではないの？<br>
+            SNSなのに『異彩』というのはいったいどういうこと？<br>
+            特殊なのにそこに集まる人とは一体？<br>
+            <br>
+            この本はNostrが好きでたまらない人達が書いた本です。<br>
+            あなたが感じた疑問に対する答え、解説をそんな私たちが頑張って書きました。<br>
+            少しでもNostrに興味を持ったあなたも、この一冊を手に一緒にNostrを楽しみませんか？
+          </p>
+        </div>
+
+        <div class="c-book-index">
+          <h2 class="c-book-index__head">目次</h2>
+          <div class="c-book-index__items">
+            <div class="c-book-index__unit">
+              <h3>01.Nostrの始め方</h3>
+              <ul>
+                <li>秘密鍵を作ろう！</li>
+                <li>プロフィールを整えよう！</li>
+                <li>日本リレーで遊ぼう！</li>
+                <li>クライアント紹介</li>
+                <li>おすすめのリレー</li>
+                <li>Lightning Networkを使った投げ銭機能（通称、Zap）の楽しみ方</li>
+              </ul>
+            </div>
+            <div class="c-book-index__unit">
+              <h3>02.Nostrの仕組み</h3>
+              <ul>
+                <li>NIP-01を読む</li>
+                <li>手を動かして学ぶ Nostrプロトコル</li>
+                <li>リレーサーバーの概要</li>
+                <li>bot開発体験記 in Nostr</li>
+              </ul>
+            </div>
+            <div class="c-book-index__unit">
+              <h3>03.Nostr村の歴史</h3>
+              <ul>
+                <li>村の歴史 - なぜ Nostr日本コミュニティが「村」と呼ばれるのか</li>
+                <li>関口現象</li>
+                <li>Made in 村？ 日本で生まれたサービスいろいろ</li>
+                <li>Botの紹介</li>
+                <li>jackから日本人への熱いラブコール</li>
+                <li>Nostr勉強会の歴史</li>
+              </ul>
+            </div>
+            <div class="c-book-index__unit">
+              <h3>04.Nostr Idol Project</h3>
+              <ul>
+                <li>Nostr Idol Project とは</li>
+                <li>Nostr Idol Project のひみつ</li>
+                <li>Nostr Idol Project 4コマ放送局</li>
+                <li>Nostr Idol Project 対話系bot</li>
+                <li>絵師が見たNostr～Nostrでの創作活動指南～</li>
+              </ul>
+            </div>
+            <div class="c-book-index__unit">
+              <h3>05.Nostr最新動向</h3>
+              <ul>
+                <li>Nostrica🇨🇷開催</li>
+                <li>fiatjafさんのコメント</li>
+                <li>Jackさんのコメント</li>
+                <li>ジャック・ドーシーさん、日本人コミュニティの一端に触れる。</li>
+                <li>ジャック・ドーシーさん、日本人たちと(ハグの絵文字)を交わす。</li>
+                <li>Nostrasia開催決定！</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {{ $resource := .Resources.GetMatch "member.json" }}
+        {{if $resource}}
+        <div class="c-book-member">
+          <h2 class="c-book-member__head">書いた人たち</h2>
+          <div class="c-book-member__items">
+            {{ $data := getJSON "content" $resource.RelPermalink }}
+            {{ range $members := $data }}
+            <h3 class="c-member-head">{{ $members.role }}</h3>
+            <div class="c-member-wrap">
+              {{ range $member := $members.member }}
+              <div class="c-member-unit">
+                <h4>{{$member.name}}</h4>
+                <ul>
+                  {{ if (findRE "http.*" $member.url1) }}
+                  <li><a href="{{$member.url1}}" target="_blank">{{$member.url1}}</a></li>
+                  {{ else }}
+                  <li>{{$member.url1}}</li>
+                  {{ end }}
+                  {{ if (findRE "http.*" $member.url2) }}
+                  <li><a href="{{$member.url2}}" target="_blank">{{$member.url2}}</a></li>
+                  {{ else }}
+                  <li>{{$member.url2}}</li>
+                  {{ end }}
+                </ul>
+              </div>
+              {{ end }}
+            </div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+
+
+        {{ $resource := .Resources.GetMatch "link.json" }}
+        {{if $resource}}
+        <div class="p-book-link">
+          <h2 class="p-book-link__head">本誌内で紹介したサイト一覧</h2>
+          <div class="p-book-link__items">
+            {{ $data := getJSON "content" $resource.RelPermalink }}
+            {{ range $link := $data }}
+            <a href="{{ $link.url }}" target="_blank">
+              <dl>
+                <dt>P.{{ $link.page }}</dt>
+                <dd>{{ $link.name }}</dd>
+              </dl>
+            </a>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+
+      </div>
+    </div>
+
+    <div class="l-footer">
+      <ul class="l-footer-share">
+        <li><a href="https://twitter.com/intent/tweet?text={{ .Permalink }}" target="_blank"><img
+              src="/images/icon-twitter-white.svg" alt="Twitterでシェア"></a></li>
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"><img
+              src="/images/icon-facebook-white.svg" alt="Facebookでシェア"></a></li>
+      </ul>
+      <p class="l-footer-copyright">
+        Copyright &copy; 2023- Nostr Idol Project
+      </p>
+    </div>
+
+  </div>
+</body>
+
+</html>

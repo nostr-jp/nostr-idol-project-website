@@ -1,0 +1,107 @@
+[
+  {
+    "role": "プロデューサー",
+    "member": [
+      {
+        "name": "Shino3",
+        "url1": "https://potofu.me/shino3",
+        "url2": "https://twitter.com/SHINOHARATTT"
+      }
+    ]
+  },
+  {
+    "role": "筆者",
+    "member": [
+      {
+        "name": "darashi",
+        "url1": "https://darashi.net",
+        "url2": "[Nostr / NIP-05]_@darashi.net"
+      },
+      {
+        "name": "U.G.M.",
+        "url1": "https://circle-ay.info",
+        "url2": "[Nostr / NIP-05]_@circle-ay.info"
+      },
+      {
+        "name": "yutaro",
+        "url1": "https://stacksats.jp",
+        "url2": "[Nostr / NIP-05]yutaro@nostrplebs.com"
+      },
+      {
+        "name": "かすてらふぃ",
+        "url1": "https://c-stellar.net",
+        "url2": "[Nostr/NIP-05] jiftechnify@c-stellar.net"
+      },
+      {
+        "name": "こじら",
+        "url1": "https://bit.ly/kojira-nostr",
+        "url2": "https://www.youtube.com/@kojiranran"
+      },
+      {
+        "name": "つるるん",
+        "url1": "https://ROBO358.com",
+        "url2": "[Nostr / NIP-05] _@ROBO358.com"
+      },
+      {
+        "name": "電子馬",
+        "url1": "https://erechorse.com",
+        "url2": "[Nostr / NIP-05] _@erechorse.com"
+      }
+    ]
+  },
+  {
+    "role": "イラストレーター",
+    "member": [
+      {
+        "name": "青ぎ",
+        "url1": "https://yawarakaizon.com/top",
+        "url2": "[Nostr/NIP-05]aogi@nosutora.com"
+      },
+      {
+        "name": "あわゆき",
+        "url1": "https://awayuki.net/con/",
+        "url2": "[Nostr / NIP-05]awayuki@awayuki.net"
+      },
+      {
+        "name": "崇徳",
+        "url1": "https://potofu.me/stok33",
+        "url2": "[Nostr / NIP-05]stok33@nosutora.com"
+      },
+      {
+        "name": "みりめい",
+        "url1": "https://millie-may.net",
+        "url2": "[Nostr/NIP-05] kawaiirailroads@millie-may.net"
+      },
+      {
+        "name": "しおん",
+        "url1": "https://potofu.me/shion72",
+        "url2": "nostr-shion72.pages.dev"
+      },
+      {
+        "name": "ゆうひまわり",
+        "url1": "https://www.pixiv.net/users/193378",
+        "url2": "[Nostr / NIP-05]yuuhimawari@yuuhimawariero.net"
+      }
+    ]
+  },
+  {
+    "role": "Webサイト",
+    "member": [
+      {
+        "name": "クコ",
+        "url1": "https://cuconoki.net/",
+        "url2": "[Nostr / NIP-05] cuconoki@cuconoki.net"
+      }
+    ]
+  },
+  {
+    "role": "デザイナー・DPT",
+    "member": [
+      {
+        "name": "よそいち",
+        "url1": "https://sksksketch.net/",
+        "url2": "［Nostr / NIP-05］yosoichi@sksksketch.net"
+      }
+    ]
+  }
+]
