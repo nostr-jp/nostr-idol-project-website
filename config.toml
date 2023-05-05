@@ -1,4 +1,6 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
+baseURL = 'https://nip-book.nostr-jp.org/'
+languageCode = 'ja'
 title = 'Nostr Idol Project'
 # theme = 'nostr-idol-project'
+[Params]
+description = 'Nostrを愛し、楽しむ者たちのプロジェクト。技術書典14にて『Hello Nostr!先住民が教えるNostrの歩き方』を頒布します。'

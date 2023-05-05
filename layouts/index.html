@@ -7,21 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:domain" content="FQDN">
+  <meta name="twitter:domain" content="nip-book.nostr-jp.org">
   <meta property="og:locale" content="ja_JP">
 
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Nostr Idol Project">
-  <meta property="og:title" content="Nostr Idol Project">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:title" content="{{ .Site.Title }}">
   <meta property="og:image" content="{{ .Site.BaseURL }}images/ogp.jpg">
 
   <meta property="og:url" content="{{ .Site.BaseURL }}">
   <link rel="canonical" href="{{ .Site.BaseURL }}">
 
-  <title>Nostr Idol Project</title>
+  <title>{{ .Site.Title }}</title>
 
-  <meta property="og:description" content="Nostrを愛し、楽しむ者たちのプロジェクト。技術書典14にて『Hello Nostr!先住民が教えるNostrの歩き方』を頒布します。">
-  <meta name="description" content="Nostrを愛し、楽しむ者たちのプロジェクト。技術書典14にて『Hello Nostr!先住民が教えるNostrの歩き方』を頒布します。">
+  <meta property="og:description" content="{{ .Site.Params.Description }}">
+  <meta name="description" content="{{ .Site.Params.Description }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
 <body>
   <div class="l-page-wrap">
     <div class="p-index-hero">
-      <h1 class="screen-reader">Nostr Idol Project</h1>
+      <h1 class="screen-reader">{{ .Site.Title }}</h1>
       <p class="p-index-hero__first-copy">
         <picture>
           <source media="(max-width: 1080px)" srcset="/images/copy-1-full.svg">
@@ -80,8 +80,10 @@
         </div>
         <div class="c-book-block__info">
           <ul class="c-book-block__share">
-            <li><a href="https://twitter.com/intent/tweet?text={{ .Permalink }}" target="_blank"><img src="/images/icon-twitter.svg" alt="Twitterでシェア"></a></li>
-            <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"><img src="/images/icon-facebook.svg" alt="Facebookでシェア"></a></li>
+            <li><a href="https://twitter.com/intent/tweet?text={{ .Permalink }}" target="_blank"><img
+                  src="/images/icon-twitter.svg" alt="Twitterでシェア"></a></li>
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"><img
+                  src="/images/icon-facebook.svg" alt="Facebookでシェア"></a></li>
           </ul>
           <h3 class="c-book-block__title">
             Hello Nostr!<br>
@@ -139,8 +141,10 @@
 
     <div class="l-footer">
       <ul class="l-footer-share">
-        <li><a href="https://twitter.com/intent/tweet?text={{ .Permalink }}" target="_blank"><img src="/images/icon-twitter-white.svg" alt="Twitterでシェア"></a></li>
-        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"><img src="/images/icon-facebook-white.svg" alt="Facebookでシェア"></a></li>
+        <li><a href="https://twitter.com/intent/tweet?text={{ .Permalink }}" target="_blank"><img
+              src="/images/icon-twitter-white.svg" alt="Twitterでシェア"></a></li>
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"><img
+              src="/images/icon-facebook-white.svg" alt="Facebookでシェア"></a></li>
       </ul>
       <p class="l-footer-copyright">
         Copyright &copy; 2023- Nostr Idol Project
