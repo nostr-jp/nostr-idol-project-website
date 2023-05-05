@@ -1,0 +1,49 @@
+[
+  {
+    "section": "01.Nostrの始め方",
+    "contents": [
+      "秘密鍵を作ろう！",
+      "プロフィールを整えよう！",
+      "日本リレーで遊ぼう！",
+      "クライアント紹介",
+      "おすすめのリレー",
+      "Lightning Networkを使った投げ銭機能（通称、Zap）の楽しみ方"
+    ]
+  },
+  {
+    "section": "02.Nostrの仕組み",
+    "contents": ["NIP-01を読む", "手を動かして学ぶ Nostrプロトコル", "リレーサーバーの概要", "bot開発体験記 in Nostr"]
+  },
+  {
+    "section": "03.Nostr村の歴史",
+    "contents": [
+      "村の歴史 - なぜ Nostr日本コミュニティが「村」と呼ばれるのか",
+      "関口現象",
+      "Made in 村？ 日本で生まれたサービスいろいろ",
+      "Botの紹介",
+      "jackから日本人への熱いラブコール",
+      "Nostr勉強会の歴史"
+    ]
+  },
+  {
+    "section": "04.Nostr Idol Project",
+    "contents": [
+      "Nostr Idol Project とは",
+      "Nostr Idol Project のひみつ",
+      "Nostr Idol Project 4コマ放送局",
+      "Nostr Idol Project 対話系bot",
+      "絵師が見たNostr～Nostrでの創作活動指南～"
+    ]
+  },
+  {
+    "section": "05.Nostr最新動向",
+    "contents": [
+      "Nostrica🇨🇷開催",
+      "fiatjafさんのコメント",
+      "Jackさんのコメント",
+      "ジャック・ドーシーさん、日本人コミュニティの一端に触れる。",
+      "ジャック・ドーシーさん、日本人たちと(ハグの絵文字)を交わす。",
+      "Nostrasia開催決定！"
+    ]
+  }
+]

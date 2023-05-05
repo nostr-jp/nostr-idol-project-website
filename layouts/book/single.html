@@ -105,63 +105,25 @@
           </p>
         </div>
 
+        {{ $resource := .Resources.GetMatch "index.json" }}
+        {{if $resource}}
         <div class="c-book-index">
           <h2 class="c-book-index__head">目次</h2>
           <div class="c-book-index__items">
+            {{ $data := getJSON "content" $resource.RelPermalink }}
+            {{ range $index := $data }}
             <div class="c-book-index__unit">
-              <h3>01.Nostrの始め方</h3>
+              <h3>{{$index.section}}</h3>
               <ul>
-                <li>秘密鍵を作ろう！</li>
-                <li>プロフィールを整えよう！</li>
-                <li>日本リレーで遊ぼう！</li>
-                <li>クライアント紹介</li>
-                <li>おすすめのリレー</li>
-                <li>Lightning Networkを使った投げ銭機能（通称、Zap）の楽しみ方</li>
+                {{ range $content := $index.contents }}
+                <li>{{$content}}</li>
+                {{ end }}
               </ul>
             </div>
-            <div class="c-book-index__unit">
-              <h3>02.Nostrの仕組み</h3>
-              <ul>
-                <li>NIP-01を読む</li>
-                <li>手を動かして学ぶ Nostrプロトコル</li>
-                <li>リレーサーバーの概要</li>
-                <li>bot開発体験記 in Nostr</li>
-              </ul>
-            </div>
-            <div class="c-book-index__unit">
-              <h3>03.Nostr村の歴史</h3>
-              <ul>
-                <li>村の歴史 - なぜ Nostr日本コミュニティが「村」と呼ばれるのか</li>
-                <li>関口現象</li>
-                <li>Made in 村？ 日本で生まれたサービスいろいろ</li>
-                <li>Botの紹介</li>
-                <li>jackから日本人への熱いラブコール</li>
-                <li>Nostr勉強会の歴史</li>
-              </ul>
-            </div>
-            <div class="c-book-index__unit">
-              <h3>04.Nostr Idol Project</h3>
-              <ul>
-                <li>Nostr Idol Project とは</li>
-                <li>Nostr Idol Project のひみつ</li>
-                <li>Nostr Idol Project 4コマ放送局</li>
-                <li>Nostr Idol Project 対話系bot</li>
-                <li>絵師が見たNostr～Nostrでの創作活動指南～</li>
-              </ul>
-            </div>
-            <div class="c-book-index__unit">
-              <h3>05.Nostr最新動向</h3>
-              <ul>
-                <li>Nostrica🇨🇷開催</li>
-                <li>fiatjafさんのコメント</li>
-                <li>Jackさんのコメント</li>
-                <li>ジャック・ドーシーさん、日本人コミュニティの一端に触れる。</li>
-                <li>ジャック・ドーシーさん、日本人たちと(ハグの絵文字)を交わす。</li>
-                <li>Nostrasia開催決定！</li>
-              </ul>
-            </div>
+            {{ end }}
           </div>
         </div>
+        {{ end }}
 
         {{ $resource := .Resources.GetMatch "member.json" }}
         {{if $resource}}
