@@ -7,18 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:domain" content="FQDN">
+  <meta name="twitter:domain" content="nip-book.nostr-jp.org">
   <meta property="og:locale" content="ja_JP">
 
   <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Nostr Idol Project">
-  <meta property="og:title" content="{{.Title}} | Nostr Idol Project">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
   <meta property="og:image" content="{{ .Site.BaseURL }}images/ogp.jpg">
 
-  <title>{{.Title}} | Nostr Idol Project</title>
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
 
-  <meta property="og:description" content="Nostrを愛し、楽しむ者たちのプロジェクト。技術書典14にて『Hello Nostr!先住民が教えるNostrの歩き方』を頒布します。">
-  <meta name="description" content="Nostrを愛し、楽しむ者たちのプロジェクト。技術書典14にて『Hello Nostr!先住民が教えるNostrの歩き方』を頒布します。">
+  <meta property="og:description" content="{{ .Description }}">
+  <meta name="description" content="{{ .Description }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@
 
       <div class="l-sub-header__nav">
         <ol class="l-sub-header__breadcrumb">
-          <li><a href="#">ホーム</a></li>
+          <li><a href="/">ホーム</a></li>
           <li>{{.Title}}</li>
         </ol>
       </div>
@@ -43,8 +43,13 @@
 
     <div class="p-book-wrap">
       <div class="c-book-block">
+        {{ $resource := .Resources.GetMatch "spec.json" }}
+        {{if $resource}}
+        {{ $data := getJSON "content" $resource.RelPermalink }}
         <div class="c-book-block__cover">
-          <img src="/images/cover/01.webp" alt="">
+          {{if $data.cover}}
+          <img src="{{ $data.cover }}" alt="">
+          {{ end }}
         </div>
         <div class="c-book-block__info">
           <ul class="c-book-block__share">
@@ -53,57 +58,60 @@
             <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"><img
                   src="/images/icon-facebook.svg" alt="Facebookでシェア"></a></li>
           </ul>
+          {{if $data.title}}
           <h1 class="c-book-block__title">
-            Hello Nostr!<br>
-            先住民が教えるNostrの歩き方
+            {{ $data.title | replaceRE "\n" "<br>" | safeHTML }}
           </h1>
+          {{ end }}
+          {{if $data.eventName}}
           <dl class="c-book-event">
             <dt>
-              技術書典14
+              {{$data.eventName}}
             </dt>
             <dd>
-              配置番号
+              {{$data.spaceNo}}
             </dd>
           </dl>
+          {{ end }}
+          {{if $data.price}}
           <dl class="c-book-price">
             <dt>
               頒布価格
             </dt>
             <dd>
-              ￥XXXX
+              ￥{{$data.price}}
             </dd>
           </dl>
+          {{ end }}
+          {{if $data.market}}
           <div class="c-book-online">
             <h4 class="c-book-online__head">オンライン</h4>
             <ul class="c-book-online__lineup">
+              {{ range $market := $data.market }}
               <li>
-                <a href="" target="_blank" rel="noopener" class="c-book-online__btn">
-                  技術書典マーケット
+                {{if $market.url}}
+                <a href="{{$market.url}}" target="_blank" rel="noopener" class="c-book-online__btn">
+                  {{$market.name}}
                 </a>
-              </li>
-              <li>
+                {{ else }}
                 <a href="" target="_blank" rel="noopener" class="c-book-online__btn c-book-online__btn--disabled">
-                  BOOTH
+                  {{$market.name}}
                 </a>
+                {{ end }}
               </li>
+              {{ end }}
             </ul>
           </div>
+          {{ end }}
         </div>
         <div class="c-book-block__detail">
+          {{if $data.description}}
           <p class="c-book-caption">
-            Twitterがイーロン・マスクによって買収されたことにより、Twitterの仕様がかつてないほどの激動を見せており、存続を危ぶむ声を各所で耳にするようになりました。<br>
-            そこで、避難所として分散SNSの『Misskey』『Mastodon』『Bluesky』などが注目を浴びています。<br>
-            そんな中、ひときわ異彩を放つ分散SNSのプロトコルがNostrです。<br>
-            <br>
-            プロトコル？サービスではないの？<br>
-            SNSなのに『異彩』というのはいったいどういうこと？<br>
-            特殊なのにそこに集まる人とは一体？<br>
-            <br>
-            この本はNostrが好きでたまらない人達が書いた本です。<br>
-            あなたが感じた疑問に対する答え、解説をそんな私たちが頑張って書きました。<br>
-            少しでもNostrに興味を持ったあなたも、この一冊を手に一緒にNostrを楽しみませんか？
+            {{ $data.description | replaceRE "\n" "<br>" | safeHTML }}
           </p>
+          {{ end }}
         </div>
+        {{ end }}
 
         {{ $resource := .Resources.GetMatch "index.json" }}
         {{if $resource}}
