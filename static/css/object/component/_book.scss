@@ -61,6 +61,24 @@
     padding: 0;
     margin-top: 10px;
     line-height: 1.4;
+    a {
+      &:link {
+        text-decoration: none;
+        color: $text-primary;
+      }
+      &:visited {
+        text-decoration: none;
+        color: $text-primary;
+      }
+      &:hover {
+        text-decoration: underline;
+        color: $text-primary;
+      }
+      &:active {
+        text-decoration: none;
+        color: $text-primary;
+      }
+    }
   }
 }
 .c-book-event {
@@ -195,5 +213,24 @@
     color: $c-secondary;
     padding: 0;
     margin: 0;
+  }
+}
+.c-book-link {
+  text-align: center;
+  margin-top: 2rem;
+  &__btn {
+    background-color: $c-primary;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5em 1.5em;
+    display: inline-block;
+    border-radius: 1.2em;
+    transition: all 0.4s;
+    @include hover {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }

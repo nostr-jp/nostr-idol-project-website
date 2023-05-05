@@ -46,10 +46,9 @@
         {{ $resource := .Resources.GetMatch "spec.json" }}
         {{if $resource}}
         {{ $data := getJSON "content" $resource.RelPermalink }}
+        {{ $slug := index (split .Permalink "/") (sub (len (split .Permalink "/")) 2) }}
         <div class="c-book-block__cover">
-          {{if $data.cover}}
-          <img src="{{ $data.cover }}" alt="">
-          {{ end }}
+          <img src="/images/cover/{{$slug}}.webp" alt="">
         </div>
         <div class="c-book-block__info">
           <ul class="c-book-block__share">

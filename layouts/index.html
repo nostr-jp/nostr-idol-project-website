@@ -78,11 +78,11 @@
       {{ $full_name := printf "/content%sspec.json" .RelPermalink }}
       {{ $data := getJSON $full_name }}
       {{if $data}}
+
+      {{ $slug := index (split .Permalink "/") (sub (len (split .Permalink "/")) 2) }}
       <div class="c-book-block">
         <div class="c-book-block__cover">
-          {{if $data.cover}}
-          <img src="{{ $data.cover }}" alt="">
-          {{ end }}
+          <img src="/images/cover/{{$slug}}.webp" alt="">
         </div>
         <div class="c-book-block__info">
           <ul class="c-book-block__share">
@@ -93,7 +93,9 @@
           </ul>
           {{if $data.title}}
           <h1 class="c-book-block__title">
-            {{ $data.title | replaceRE "\n" "<br>" | safeHTML }}
+            <a href="{{.RelPermalink}}">
+              {{ $data.title | replaceRE "\n" "<br>" | safeHTML }}
+            </a>
           </h1>
           {{ end }}
           {{if $data.eventName}}
@@ -143,6 +145,12 @@
             {{ $data.description | replaceRE "\n" "<br>" | safeHTML }}
           </p>
           {{ end }}
+
+          <p class="c-book-link">
+            <a href="{{.RelPermalink}}" class="c-book-link__btn">
+              本の詳細はこちら
+            </a>
+          </p>
         </div>
       </div>
       {{end}}

@@ -591,6 +591,22 @@ a:active {
   margin-top: 10px;
   line-height: 1.4;
 }
+.c-book-block__title a:link {
+  text-decoration: none;
+  color: #3d3935;
+}
+.c-book-block__title a:visited {
+  text-decoration: none;
+  color: #3d3935;
+}
+.c-book-block__title a:hover {
+  text-decoration: underline;
+  color: #3d3935;
+}
+.c-book-block__title a:active {
+  text-decoration: none;
+  color: #3d3935;
+}
 
 .c-book-event {
   padding: 0;
@@ -754,6 +770,28 @@ a:active {
   color: #FD5692;
   padding: 0;
   margin: 0;
+}
+
+.c-book-link {
+  text-align: center;
+  margin-top: 2rem;
+}
+.c-book-link__btn {
+  background-color: #965EA3;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  border-radius: 1.2em;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+@media (hover: hover) {
+  .c-book-link__btn:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 
 .c-member-head {
