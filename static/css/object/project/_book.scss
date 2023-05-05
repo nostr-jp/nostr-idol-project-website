@@ -1,0 +1,69 @@
+@use "../../foundation/global" as *;
+
+.p-book-wrap {
+  border: 40px solid $c-secondary;
+  box-sizing: border-box;
+  padding: 60px 20px;
+  background-color: #fff;
+  @include bp(tab) {
+    border: 20px solid $c-secondary;
+    padding: 40px 20px;
+  }
+  @include bp(sp) {
+    border: 20px solid $c-secondary;
+    border-right: none;
+    border-left: none;
+    padding: 40px 10px;
+  }
+}
+.p-book-link {
+  padding: 0;
+  margin: 40px 0 0 0;
+  &__head {
+    font-size: 2rem;
+    color: $c-secondary;
+    padding: 0;
+    margin: 0;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;
+    a {
+      transition: all 0.2s;
+      color: $text-primary;
+      @include hover {
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+    dl {
+      display: flex;
+      align-items: center;
+      padding: 0.6rem;
+      gap: 10px;
+      @include shadow--2dp;
+      border-radius: 4px;
+      dt {
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        color: $text-primary;
+      }
+      dd {
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: $text-primary;
+      }
+    }
+  }
+}

@@ -143,3 +143,57 @@
     }
   }
 }
+.c-book-index {
+  padding: 0;
+  margin: 40px 0 0 0;
+  &__head {
+    font-size: 2rem;
+    color: $c-secondary;
+    padding: 0;
+    margin: 0;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    @include bp(tab) {
+      display: block;
+    }
+  }
+  &__unit {
+    padding: 20px 10px;
+    margin: 0;
+    width: 50%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    @include bp(tab) {
+      width: 100%;
+    }
+    h3 {
+      padding: 0;
+      margin: 0;
+    }
+    ul {
+      padding: 0 0 0 1rem;
+      margin: 0;
+    }
+    li {
+      padding: 0.5rem 0 0 0;
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+}
+.c-book-member {
+  padding: 0;
+  margin: 40px 0 0 0;
+  &__head {
+    font-size: 2rem;
+    color: $c-secondary;
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -1,0 +1,57 @@
+@use "../foundation/global" as *;
+
+.l-sub-header {
+  &__logo {
+    background-image: url(/images/subpage-logo.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 48px;
+    height: 74px;
+    width: 100%;
+    display: block;
+  }
+  &__breadcrumb {
+    display: flex;
+    gap: 0 20px;
+    list-style: none;
+    padding: 6px 0 6px 18px;
+    overflow: hidden;
+    background-color: $c-primary;
+    font-size: 0.9em;
+    margin: 0;
+    overflow-x: auto;
+    li {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-right: 20px;
+      color: #fff;
+      flex-grow: 0;
+      flex-shrink: 0;
+      &:not(:last-child)::before {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        content: "";
+        right: 0;
+        border-left: 10px solid #fff;
+      }
+      &:not(:last-child)::after {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        content: "";
+        right: 2px;
+        border-left: 10px solid $c-primary;
+      }
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

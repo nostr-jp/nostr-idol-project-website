@@ -9,17 +9,20 @@
  *--------------------------------------*/
 @use "./layout/page-wrap";
 @use "./layout/footer";
+@use "./layout/sub-header";
 
 /*-------------------
  * component
  *-------------------*/
 @use "./object/component/book";
+@use "./object/component/member";
 
 /*-------------------
  * project
  *-------------------*/
 @use "./object/project/index";
 @use "./object/project/error";
+@use "./object/project/book" as p-book;
 
 /*-------------------
  * object
