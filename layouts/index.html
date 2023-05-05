@@ -73,10 +73,16 @@
     <div class="p-index-books">
       <h2 class="p-index-books__head">BOOKS</h2>
 
-
+      {{ $latest := first 1 .Site.RegularPages.ByDate.Reverse }}
+      {{ range $latest }}
+      {{ $full_name := printf "/content%sspec.json" .RelPermalink }}
+      {{ $data := getJSON $full_name }}
+      {{if $data}}
       <div class="c-book-block">
         <div class="c-book-block__cover">
-          <img src="/images/cover/01.webp" alt="">
+          {{if $data.cover}}
+          <img src="{{ $data.cover }}" alt="">
+          {{ end }}
         </div>
         <div class="c-book-block__info">
           <ul class="c-book-block__share">
@@ -85,60 +91,63 @@
             <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"><img
                   src="/images/icon-facebook.svg" alt="Facebookでシェア"></a></li>
           </ul>
-          <h3 class="c-book-block__title">
-            Hello Nostr!<br>
-            先住民が教えるNostrの歩き方
-          </h3>
+          {{if $data.title}}
+          <h1 class="c-book-block__title">
+            {{ $data.title | replaceRE "\n" "<br>" | safeHTML }}
+          </h1>
+          {{ end }}
+          {{if $data.eventName}}
           <dl class="c-book-event">
             <dt>
-              技術書典14
+              {{$data.eventName}}
             </dt>
             <dd>
-              配置番号
+              {{$data.spaceNo}}
             </dd>
           </dl>
+          {{ end }}
+          {{if $data.price}}
           <dl class="c-book-price">
             <dt>
               頒布価格
             </dt>
             <dd>
-              ￥XXXX
+              ￥{{$data.price}}
             </dd>
           </dl>
+          {{ end }}
+          {{if $data.market}}
           <div class="c-book-online">
             <h4 class="c-book-online__head">オンライン</h4>
             <ul class="c-book-online__lineup">
+              {{ range $market := $data.market }}
               <li>
-                <a href="" target="_blank" rel="noopener" class="c-book-online__btn">
-                  技術書典マーケット
+                {{if $market.url}}
+                <a href="{{$market.url}}" target="_blank" rel="noopener" class="c-book-online__btn">
+                  {{$market.name}}
                 </a>
-              </li>
-              <li>
+                {{ else }}
                 <a href="" target="_blank" rel="noopener" class="c-book-online__btn c-book-online__btn--disabled">
-                  BOOTH
+                  {{$market.name}}
                 </a>
+                {{ end }}
               </li>
+              {{ end }}
             </ul>
           </div>
+          {{ end }}
         </div>
         <div class="c-book-block__detail">
+          {{if $data.description}}
           <p class="c-book-caption">
-            Twitterがイーロン・マスクによって買収されたことにより、Twitterの仕様がかつてないほどの激動を見せており、存続を危ぶむ声を各所で耳にするようになりました。<br>
-            そこで、避難所として分散SNSの『Misskey』『Mastodon』『Bluesky』などが注目を浴びています。<br>
-            そんな中、ひときわ異彩を放つ分散SNSのプロトコルがNostrです。<br>
-            <br>
-            プロトコル？サービスではないの？<br>
-            SNSなのに『異彩』というのはいったいどういうこと？<br>
-            特殊なのにそこに集まる人とは一体？<br>
-            <br>
-            この本はNostrが好きでたまらない人達が書いた本です。<br>
-            あなたが感じた疑問に対する答え、解説をそんな私たちが頑張って書きました。<br>
-            少しでもNostrに興味を持ったあなたも、この一冊を手に一緒にNostrを楽しみませんか？
+            {{ $data.description | replaceRE "\n" "<br>" | safeHTML }}
           </p>
+          {{ end }}
         </div>
       </div>
+      {{end}}
     </div>
-
+    {{end}}
     <div class="l-footer">
       <ul class="l-footer-share">
         <li><a href="https://twitter.com/intent/tweet?text={{ .Permalink }}" target="_blank"><img
