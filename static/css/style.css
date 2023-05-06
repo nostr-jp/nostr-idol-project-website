@@ -421,6 +421,7 @@ a:active {
 }
 .l-footer-share img {
   width: 32px;
+  height: 32px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -505,7 +506,7 @@ a:active {
 
 .c-book-block {
   max-width: 840px;
-  margin: 40px auto 0;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -576,6 +577,7 @@ a:active {
 }
 .c-book-block__share img {
   width: 32px;
+  height: 32px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -1010,7 +1012,7 @@ a:active {
   font-family: "Anton", sans-serif;
   font-weight: 400;
   padding: 0;
-  margin: 0;
+  margin: 0 0 40px;
   text-align: center;
 }
 @media screen and (max-width: 520px) {
@@ -1111,6 +1113,11 @@ a:active {
   padding: 0;
   margin: 0;
 }
+@media screen and (max-width: 520px) {
+  .p-book-link__head {
+    font-size: 1.6rem;
+  }
+}
 .p-book-link__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1118,6 +1125,7 @@ a:active {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 1rem;
+  margin-top: 20px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   image-rendering: -webkit-optimize-contrast;
@@ -1141,6 +1149,7 @@ a:active {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.6rem;
+  margin: 0;
   gap: 10px;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);

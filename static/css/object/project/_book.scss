@@ -24,11 +24,15 @@
     color: $c-secondary;
     padding: 0;
     margin: 0;
+    @include bp(sp){
+      font-size: 1.6rem;
+    }
   }
   &__items {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-top: 20px;
     backface-visibility: hidden;
     image-rendering: -webkit-optimize-contrast;
     a {
@@ -44,6 +48,7 @@
       display: flex;
       align-items: center;
       padding: 0.6rem;
+      margin: 0;
       gap: 10px;
       @include shadow--2dp;
       border-radius: 4px;
