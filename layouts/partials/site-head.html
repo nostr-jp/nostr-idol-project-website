@@ -1,21 +1,28 @@
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  {{ $pageTitle := cond .IsHome .Site.Title (printf "%s | %s" .Title
+  .Site.Title) }}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:domain" content="nip-book.nostr-jp.org">
-<meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:domain" content="nip-book.nostr-jp.org" />
+  <meta property="og:locale" content="ja_JP" />
 
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="{{ .Site.Title }}">
-<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
-<meta property="og:image" content="{{ .Site.BaseURL }}images/ogp.jpg">
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+  <meta property="og:title" content="{{ $pageTitle }}" />
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/ogp.jpg" />
 
-<title>{{ .Title }} | {{ .Site.Title }}</title>
+  <title>{{ $pageTitle }}</title>
 
-<meta property="og:description" content="{{ .Description }}">
-<meta name="description" content="{{ .Description }}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.min.css" />
+  <meta property="og:description" content="{{ .Description }}" />
+  <meta name="description" content="{{ .Description }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/css/style.min.css" />
+</head>

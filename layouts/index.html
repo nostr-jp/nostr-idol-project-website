@@ -1,32 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:domain" content="nip-book.nostr-jp.org">
-  <meta property="og:locale" content="ja_JP">
-
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="{{ .Site.Title }}">
-  <meta property="og:title" content="{{ .Site.Title }}">
-  <meta property="og:image" content="{{ .Site.BaseURL }}images/ogp.jpg">
-
-  <meta property="og:url" content="{{ .Site.BaseURL }}">
-  <link rel="canonical" href="{{ .Site.BaseURL }}">
-
-  <title>{{ .Site.Title }}</title>
-
-  <meta property="og:description" content="{{ .Site.Params.Description }}">
-  <meta name="description" content="{{ .Site.Params.Description }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.min.css" />
-</head>
+{{ partial "site-head.html" .}}
 
 <body>
   <div class="l-page-wrap">
