@@ -64,6 +64,16 @@
             </dd>
           </dl>
           {{ end }}
+          {{if $data.online_price}}
+          <dl class="c-book-price">
+            <dt>
+              電子版
+            </dt>
+            <dd>
+              ￥{{$data.online_price}}
+            </dd>
+          </dl>
+          {{ end }}
           {{if $data.market}}
           <div class="c-book-online">
             <h4 class="c-book-online__head">オンライン</h4>
