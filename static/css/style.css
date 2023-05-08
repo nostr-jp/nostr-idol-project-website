@@ -686,7 +686,7 @@ a:active {
 
 .c-book-price {
   padding: 0;
-  margin-top: 10px;
+  margin: 10px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -698,14 +698,18 @@ a:active {
 .c-book-price dt {
   font-size: 1rem;
   font-weight: bold;
+  width: 4em;
   padding: 0;
   margin: 0;
 }
 .c-book-price dd {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: bold;
   padding: 0;
   margin: 0;
+}
+.c-book-price--digital dd {
+  font-size: 1.5rem;
 }
 
 .c-book-online {

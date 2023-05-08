@@ -4,16 +4,12 @@
   "eventName": "技術書典14",
   "spaceNo": "う18",
   "price": "1,500",
-  "_online_price": "1,000",
+  "online_price": "1,000",
   "description": "Twitterがイーロン・マスクによって買収されたことにより、Twitterの仕様がかつてないほどの激動を見せており、存続を危ぶむ声を各所で耳にするようになりました。\nそこで、避難所として分散SNSの『Misskey』『Mastodon』『Bluesky』などが注目を浴びています。\nそんな中、ひときわ異彩を放つ分散SNSのプロトコルがNostrです。\n\nプロトコル？サービスではないの？\nSNSなのに『異彩』というのはいったいどういうこと？\n特殊なのにそこに集まる人とは一体？\n\nこの本はNostrが好きでたまらない人達が書いた本です。\nあなたが感じた疑問に対する答え、解説をそんな私たちが頑張って書きました。\n少しでもNostrに興味を持ったあなたも、この一冊を手に一緒にNostrを楽しみませんか？",
-  "_market": [
+  "market": [
     {
       "name": "技術書典マーケット",
-      "url": "https://techbookfest.org/market"
-    },
-    {
-      "name": "BOOTH",
-      "url": "https://booth.pm/"
+      "url": "https://techbookfest.org/organization/nn7eXA7P7yENck0ep3PPBc"
     }
   ]
 }
