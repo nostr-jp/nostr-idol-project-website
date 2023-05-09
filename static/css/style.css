@@ -1386,13 +1386,18 @@ p.swiperBody img {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  width: 100%;
   padding: 0;
   margin: 0;
   font-size: 16px;
   font-weight: 600;
   color: #3d3935;
+}
+.p-book-link__items dl dd span {
+  display: block;
+  word-break: break-all;
 }
 
 /*--------------------------------------*
