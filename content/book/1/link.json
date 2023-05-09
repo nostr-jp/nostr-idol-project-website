@@ -1,51 +1,51 @@
 [
   {
-    "name": "【クライアント紹介】Damus",
+    "name": "Damus",
     "url": "https://apps.apple.com/jp/app/damus/id1628663131",
     "page": 26
   },
   {
-    "name": "【クライアント紹介】Amethyst",
+    "name": "Amethyst",
     "url": "https://play.google.com/store/apps/details?id=com.vitorpamplona.amethyst&hl=ja&gl=US",
     "page": 28
   },
   {
-    "name": "【クライアント紹介】Iris",
+    "name": "Iris",
     "url": "https://iris.to/",
     "page": 30
   },
   {
-    "name": "【クライアント紹介】Snort",
+    "name": "Snort",
     "url": "https://snort.social/",
     "page": 32
   },
   {
-    "name": "【クライアント紹介】Astraea",
+    "name": "Astraea",
     "url": "https://astraea.mousedev.page/",
     "page": 34
   },
   {
-    "name": "【クライアント紹介】nostter",
+    "name": "nostter",
     "url": "https://nostter.vercel.app/",
     "page": 36
   },
   {
-    "name": "【クライアント紹介】Rabbit",
+    "name": "Rabbit",
     "url": "https://syusui-s.github.io/rabbit/",
     "page": 38
   },
   {
-    "name": "【クライアント紹介】BBS on Nostr",
+    "name": "BBS on Nostr",
     "url": "https://bbs-on-nostr.vercel.app/",
     "page": 40
   },
   {
-    "name": "【クライアント紹介】GARNET",
+    "name": "GARNET",
     "url": "https://garnet.nostrian.net/",
     "page": 42
   },
   {
-    "name": "【クライアント紹介】Nostr Feeds",
+    "name": "Nostr Feeds",
     "url": "https://relay-jp.nostr.wirednet.jp/index.html　他",
     "page": 44
   },
@@ -85,142 +85,142 @@
     "page": 61
   },
   {
-    "name": "【村の歴史】Nostr.Band",
+    "name": "Nostr.Band",
     "url": "https://nostr.band/",
     "page": 86
   },
   {
-    "name": "【村の歴史】Nosaray",
+    "name": "Nosaray",
     "url": "https://nosaray.vercel.app",
     "page": 86
   },
   {
-    "name": "【村の歴史】Nosli",
+    "name": "Nosli",
     "url": "https://nosli.vercel.app",
     "page": 86
   },
   {
-    "name": "【関口現象】NostrFlu",
+    "name": "NostrFlu",
     "url": "https://heguro.github.io/nostr-following-list-util/",
     "page": 91
   },
   {
-    "name": "【日本で生まれたサービス】Scrapbox",
+    "name": "Scrapbox",
     "url": "https://scrapbox.io/nostr/",
     "page": 92
   },
   {
-    "name": "【日本で生まれたサービス】のすとら！",
+    "name": "のすとら！",
     "url": "https://nosutora.com",
     "page": 92
   },
   {
-    "name": "【日本で生まれたサービス】Astraea",
+    "name": "Astraea",
     "url": "https://astraea.mousedev.page",
     "page": 92
   },
   {
-    "name": "【日本で生まれたサービス】BBS on Nostr",
+    "name": "BBS on Nostr",
     "url": "https://bbs-on-nostr.vercel.app/",
     "page": 92
   },
   {
-    "name": "【日本で生まれたサービス】nostrbbs",
+    "name": "nostrbbs",
     "url": "https://test.ikeji.ma/nostrbbs/",
     "page": 92
   },
   {
-    "name": "【日本で生まれたサービス】Nostr検索ポータル",
+    "name": "Nostr検索ポータル",
     "url": "https://nostr.hoku.in",
     "page": 93
   },
   {
-    "name": "【日本で生まれたサービス】searchnos",
+    "name": "searchnos",
     "url": "https://github.com/darashi/searchnos",
     "page": 93
   },
   {
-    "name": "【日本で生まれたサービス】nostrbuzzs",
+    "name": "nostrbuzzs",
     "url": "https://nostrbuzzs.deno.dev",
     "page": 93
   },
   {
-    "name": "【日本で生まれたサービス】Nostrends",
+    "name": "Nostrends",
     "url": "https://nostrends.vercel.app",
     "page": 93
   },
   {
-    "name": "【日本で生まれたサービス】nostr: post checker",
+    "name": "nostr: post checker",
     "url": "https://koteitan.github.io/nostr-post-checker/",
     "page": 93
   },
   {
-    "name": "【日本で生まれたサービス】NostrFlu",
+    "name": "NostrFlu",
     "url": "https://heguro.github.io/nostr-following-list-util/",
     "page": 93
   },
   {
-    "name": "【日本で生まれたサービス】#illust tagged notes on Nostr",
+    "name": "#illust tagged notes on Nostr",
     "url": "https://nostr-illust.vercel.app",
     "page": 93
   },
   {
-    "name": "【日本で生まれたサービス】Nosli",
+    "name": "Nosli",
     "url": "https://nosli.vercel.appp",
     "page": 93
   },
   {
-    "name": "【日本で生まれたサービス】NosTx",
+    "name": "NosTx",
     "url": "https://nostx.shino3.net",
     "page": 93
   },
   {
-    "name": "【日本で生まれたサービス】Nosaray",
+    "name": "Nosaray",
     "url": "https://nosaray.vercel.app",
     "page": 93
   },
   {
-    "name": "【日本で生まれたサービス】Nostr 村放送局 nostradio",
+    "name": "Nostr 村放送局 nostradio",
     "url": "https://nostradio.deno.dev",
     "page": 94
   },
   {
-    "name": "【日本で生まれたサービス】murasaki",
+    "name": "murasaki",
     "url": "https://github.com/darashi/murasaki",
     "page": 94
   },
   {
-    "name": "【日本で生まれたサービス】GARNET",
+    "name": "GARNET",
     "url": "https://garnet.nostrian.net",
     "page": 94
   },
   {
-    "name": "【日本で生まれたサービス】nothello",
+    "name": "nothello",
     "url": "https://nothello.studiokaiji.com/",
     "page": 94
   },
   {
-    "name": "【日本で生まれたサービス】Algia",
+    "name": "Algia",
     "url": "https://github.com/mattn/algia",
     "page": 94
   },
   {
-    "name": "【日本で生まれたサービス】nostter",
+    "name": "nostter",
     "url": "https://nostter.vercel.app/",
     "page": 94
   },
   {
-    "name": "【日本で生まれたサービス】rabbit",
+    "name": "rabbit",
     "url": "https://syusui-s.github.io/rabbit//hello",
     "page": 94
   },
   {
-    "name": "【日本で生まれたサービス】Nostr Feeds from relay-jp.nostr.wirednet.jp.",
+    "name": "Nostr Feeds from relay-jp.nostr.wirednet.jp.",
     "url": "https://relay-jp.nostr.wirednet.jp/",
     "page": 94
   },
   {
-    "name": "【日本で生まれたサービス】nostr-jp/awesome-nostr-japan",
+    "name": "nostr-jp/awesome-nostr-japan",
     "url": "https://github.com/nostr-jp/awesome-nostr-japan",
     "page": 94
   },
