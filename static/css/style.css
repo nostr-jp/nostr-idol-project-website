@@ -1393,6 +1393,7 @@ p.swiperBody img {
   font-size: 16px;
   font-weight: 600;
   color: #3d3935;
+  word-wrap: break-word;
 }
 
 /*--------------------------------------*
