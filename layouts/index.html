@@ -62,6 +62,38 @@
       <div class="c-book-block">
         <div class="c-book-block__cover">
           <img src="/images/cover/{{$slug}}.webp" alt="">
+
+          {{if $data.samplePage}}
+          <div class="swiperModalButton">
+            <button class="modalOpen">紙面サンプル</button>
+          </div>
+
+          <!-- モーダル -->
+          <div class="modal" id="modal">
+            <div class="modal__overlay modalClose"></div>
+            <div class="modal__content">
+              <div class="modal_inner">
+                <div class="modal__close-btn modalClose" aria-label="閉じる"><span class="lineClose"></span></div>
+                <!-- スライダー -->
+                <div class="swiper modalInSlider">
+                  <div class="swiper-wrapper">
+                    {{ range $val := seq $data.samplePage }}
+                    <div class="swiper-slide modalInSlider">
+                      <p class="swiperBody">
+                        {{ $filepath := printf "/images/sample/%s/%d.webp" $slug $val }}
+                        <img src="{{ $filepath }}" alt="">
+                      </p>
+                    </div>
+                    {{ end }}
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <!-- ここまで -->
+          {{ end }}
         </div>
         <div class="c-book-block__info">
           <ul class="c-book-block__share">
