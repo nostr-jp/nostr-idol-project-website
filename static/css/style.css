@@ -585,7 +585,7 @@ a:active {
     margin: 0 auto;
   }
 }
-.c-book-block__cover img {
+.c-book-block__cover > img {
   width: 100%;
   border: 1px solid #000;
 }
@@ -845,6 +845,171 @@ a:active {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
+}
+
+/* ---------------------------- */
+/* --- Base --- */
+/* ---------------------------- */
+.swiperModalButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.modalOpen {
+  cursor: pointer;
+  border: none;
+  background-color: #965EA3;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  border-radius: 1.2em;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+@media (hover: hover) {
+  .modalOpen:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+/* モーダル */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* モーダルがactiveの時 */
+.modal.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* モーダル背景のオーバーレイ部分 */
+.modal__overlay {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* モーダルのコンテンツ */
+.modal__content {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.modal_inner {
+  -webkit-filter: drop-shadow(0px 0px 4px #ddd);
+          filter: drop-shadow(0px 0px 4px #ddd);
+  background: #FFF;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 2px;
+  padding: 20px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* 閉じるボタン */
+.modal__close-btn {
+  position: absolute;
+  right: 0;
+  top: -40px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.modal__close-btn:hover {
+  opacity: 0.8;
+}
+
+/* 閉じるボタンのX */
+.lineClose {
+  display: inline-block;
+  vertical-align: middle;
+  color: #313131;
+  line-height: 1;
+  width: 2rem;
+  height: 0.1rem;
+  background: currentColor;
+  border-radius: 0.1rem;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.lineClose::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+p.swiperBody {
+  margin: 0;
+  text-align: center;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+p.swiperBody img {
+  max-width: 100%;
+  height: auto;
 }
 
 .c-member-head {
