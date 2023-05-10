@@ -135,6 +135,11 @@
               {{ end }}
             </ul>
           </div>
+          {{if $data.sales_start}}
+          <p class="c-book-sales">
+            {{$data.sales_start}}
+          </p>
+          {{ end }}
           {{ end }}
         </div>
         <div class="c-book-block__detail">

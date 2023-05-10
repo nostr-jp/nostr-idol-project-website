@@ -757,6 +757,19 @@ a:active {
   background-color: #ccc;
 }
 
+.c-book-sales {
+  padding: 0 0 0 1.2em;
+  margin: 8px 0 0;
+  font-size: 14px;
+  position: relative;
+}
+.c-book-sales::before {
+  content: "※";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .c-book-index {
   padding: 0;
   margin: 40px 0 0 0;
