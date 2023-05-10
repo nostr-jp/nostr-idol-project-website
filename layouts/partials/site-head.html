@@ -7,7 +7,6 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:domain" content="nip-book.nostr-jp.org" />
   <meta property="og:locale" content="ja_JP" />
-
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <meta property="og:title" content="{{ $pageTitle }}" />
@@ -15,9 +14,14 @@
 
   <title>{{ $pageTitle }}</title>
 
-  <meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
-  <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+  <meta property="og:description"
+    content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+  <meta name="description"
+    content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
 
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
 
   <link rel="stylesheet" href="/lib/swiper-bundle.min.css" />
   <script src="/lib/swiper-bundle.min.js"></script>
