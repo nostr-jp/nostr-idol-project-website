@@ -5,8 +5,8 @@
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXDGJ8X"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXDGJ8X" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div class="l-page-wrap">
     <div class="p-index-hero">
@@ -97,8 +97,8 @@
         </div>
         <div class="c-book-block__info">
           <ul class="c-book-block__share">
-            <li><a href="https://twitter.com/intent/tweet?text={{ $data.share_text }}{{ .Permalink }}" target="_blank"><img
-                  src="/images/icon-twitter.svg" alt="Twitterでシェア"></a></li>
+            <li><a href="https://twitter.com/intent/tweet?text={{ $data.share_text }}{{ .Permalink }}"
+                target="_blank"><img src="/images/icon-twitter.svg" alt="Twitterでシェア"></a></li>
             <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"><img
                   src="/images/icon-facebook.svg" alt="Facebookでシェア"></a></li>
           </ul>
@@ -168,6 +168,11 @@
               {{ end }}
             </ul>
           </div>
+          {{if $data.sales_start}}
+          <p class="c-book-sales">
+            {{$data.sales_start}}
+          </p>
+          {{ end }}
           {{ end }}
         </div>
         <div class="c-book-block__detail">
