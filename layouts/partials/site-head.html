@@ -15,8 +15,8 @@
 
   <title>{{ $pageTitle }}</title>
 
-  <meta property="og:description" content="{{ $.Site.Params.Description }}" />
-  <meta name="description" content="{{ $.Site.Params.Description }}" />
+  <meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+  <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
 
 
   <link rel="stylesheet" href="/lib/swiper-bundle.min.css" />
