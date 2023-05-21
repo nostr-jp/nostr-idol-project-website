@@ -860,6 +860,66 @@ a:active {
   }
 }
 
+.c-book-errata {
+  padding: 0;
+  margin: 40px 0 0 0;
+}
+.c-book-errata__head {
+  font-size: 2rem;
+  color: #FD5692;
+  padding: 0;
+  margin: 0;
+}
+.c-book-errata__unit {
+  padding: 10px 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6px;
+}
+.c-book-errata__unit dt {
+  font-weight: bold;
+}
+.c-book-errata__unit dd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+}
+.c-book-errata__unit dd span {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 3px;
+}
+.c-book-errata__unit dd span:first-child {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-color: #777;
+  color: #fff;
+}
+.c-book-errata__unit dd.c-book-errata__error span:first-child {
+  background-color: #965EA3;
+}
+.c-book-errata__unit dd.c-book-errata__correct span:first-child {
+  background-color: #FD5692;
+}
+
 /* ---------------------------- */
 /* --- Base --- */
 /* ---------------------------- */
@@ -952,7 +1012,7 @@ a:active {
 .modal_inner {
   -webkit-filter: drop-shadow(0px 0px 4px #ddd);
           filter: drop-shadow(0px 0px 4px #ddd);
-  background: #FFF;
+  background: #fff;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
