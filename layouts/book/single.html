@@ -203,7 +203,6 @@
         </div>
         {{ end }}
 
-
         {{ $resource := .Resources.GetMatch "link.json" }}
         {{if $resource}}
         <div class="p-book-link">
@@ -217,6 +216,23 @@
                 <dd><span>{{ $link.name }}</span></dd>
               </dl>
             </a>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+
+        {{ $resource := .Resources.GetMatch "errata.json" }}
+        {{if $resource}}
+        <div class="c-book-errata">
+          <h2 class="c-book-errata__head">正誤情報</h2>
+          <div class="c-book-errata__items">
+            {{ $data := getJSON "content" $resource.RelPermalink }}
+            {{ range $errata := $data }}
+            <dl class="c-book-errata__unit">
+              <dt>{{$errata.target}}</dt>
+              <dd class="c-book-errata__error"><span>誤</span><span>{{$errata.error}}</span></dd>
+              <dd class="c-book-errata__correct"><span>正</span><span>{{$errata.correct}}</span></dd>
+            </dl>
             {{ end }}
           </div>
         </div>
