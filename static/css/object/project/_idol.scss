@@ -1,0 +1,171 @@
+@use "../../foundation/global" as *;
+
+.p-idol {
+  background-image: url(/images/idol-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+}
+.p-idol-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  padding: 40px 20px;
+}
+.p-idol-head {
+  z-index: 10;
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  width: 48%;
+  max-width: 600px;
+  @include bp(tab) {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    color: $c-primary;
+    gap: 6px;
+    font-family: "IBM Plex Sans JP";
+    font-weight: 700;
+    &--sub {
+      font-size: 28px;
+      @include bp(tab){
+        font-size: clamp(1.25rem, 0.9722rem + 1.3889vw, 1.75rem);
+      }
+    }
+    &--main {
+      font-size: 68px;
+      @include bp(tab){
+        font-size: clamp(3rem, 2.3056rem + 3.4722vw, 4.25rem);
+      }
+    }
+  }
+  &__selector {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 1rem;
+    gap: 10px;
+    justify-content: center;
+    max-width: 320px;
+    li {
+      margin: 0;
+      padding: 0;
+      width: 46px;
+      height: 46px;
+      line-height: 0;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    img {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}
+.p-idol-body {
+  position: relative;
+}
+.p-idol-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 50%;
+  grid-template-rows: 1fr max-content;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "p-idol-card-name p-idol-card-thumb"
+    "p-idol-card-desc p-idol-card-thumb";
+  @media screen and (max-width: 1020px) {
+    grid-template-areas:
+      "p-idol-card-name p-idol-card-thumb"
+      "p-idol-card-desc p-idol-card-desc";
+  }
+  @include bp(tab) {
+    display: block;
+  }
+  &-thumb {
+    grid-area: p-idol-card-thumb;
+    text-align: center;
+    padding: 80px 0 0 20px;
+    @include bp(tab) {
+      padding: 20px 0;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      @include bp(tab) {
+        max-width: 520px;
+      }
+    }
+  }
+  &-name {
+    align-self: end;
+    grid-area: p-idol-card-name;
+    &__text {
+      font-family: "IBM Plex Sans JP";
+      font-weight: 700;
+      font-size: 42px;
+      color: $c-primary;
+      padding: 0;
+      margin: 0;
+      @include bp(tab) {
+        font-size: clamp(1.75rem, 0.847rem + 4.51vw, 3.375rem);
+        text-align: center;
+      }
+    }
+  }
+  &-desc {
+    grid-area: p-idol-card-desc;
+    &__body {
+      background-color: $c-primary;
+      border-radius: 8px;
+      padding: 1em;
+      margin: 0.5rem auto 0;
+      max-width: 640px;
+    }
+    &__text {
+      color: #fff;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+    }
+    &__link{
+      margin-top: 1rem;
+    }
+    &__btn {
+      background-color: #fff;
+      color: $c-primary;
+      font-weight: 600;
+      padding: 0.5em 1.5em;
+      display: inline-block;
+      border-radius: 1.2em;
+      transition: all 0.4s;
+      font-size: 14px;
+      @include hover {
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      &--disabled {
+        pointer-events: none;
+        background-color: #ccc;
+      }
+    }
+  }
+}

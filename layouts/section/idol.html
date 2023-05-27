@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+{{ $slug := index (split .Permalink "/") (sub (len (split .Permalink "/")) 2) }}
+
+{{ partial "site-head.html" .}}
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXDGJ8X" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="l-page-wrap">
+
+    <div class="l-sub-header">
+      <a href="/" class="l-sub-header__logo">
+      </a>
+
+      <div class="l-sub-header__nav">
+        <ol class="l-sub-header__breadcrumb">
+          <li><a href="/">ホーム</a></li>
+          <li>{{.Title}}</li>
+        </ol>
+      </div>
+
+    </div>
+
+    <div class="p-idol">
+      <div class="p-idol-wrap">
+        <div class="p-idol-head">
+          <h1 class="p-idol-head__title">
+            <span class="p-idol-head__title--sub">
+              NIP所属アイドル
+            </span>
+            <span class="p-idol-head__title--main">
+              対話型bot
+            </span>
+          </h1>
+          <ul class="p-idol-head__selector">
+            {{ $resource := .Resources.GetMatch "idol.json" }}
+            {{if $resource}}
+            {{ $data := getJSON "content" $resource.RelPermalink }}
+            {{ range $idol := $data }}
+            <li>
+              <img src="/images/idol/thumb{{ $idol.id }}.webp" alt="">
+            </li>
+            {{ end }}
+            {{ end }}
+          </ul>
+        </div>
+        <div class="p-idol-body">
+          <div class="swiper p-idol-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper p-idol-swiper-wrapper">
+              <!-- Slides -->
+              {{ $resource := .Resources.GetMatch "idol.json" }}
+              {{if $resource}}
+              {{ $data := getJSON "content" $resource.RelPermalink }}
+              {{ range $idol := $data }}
+              <div class="swiper-slide">
+                <div class="p-idol-card">
+                  <div class="p-idol-card-thumb">
+                    <img src="/images/idol/char{{ $idol.id }}.webp" alt="">
+                  </div>
+                  <div class="p-idol-card-name">
+                    <h3 class="p-idol-card-name__text">
+                      {{ $idol.name }}
+                    </h3>
+                  </div>
+                  <div class="p-idol-card-desc">
+                    <div class="p-idol-card-desc__body">
+                      <p class="p-idol-card-desc__text">
+                        {{ $idol.desc }}
+                      </p>
+                      <div class="p-idol-card-desc__link">
+                        <a href="{{ $idol.link }}" target="_blank" class="p-idol-card-desc__btn">フォローはこちら</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {{ end }}
+              {{ end }}
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    {{ partial "site-footer.html" .}}
+  </div>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      // Swiperの設定
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        spaceBetween: 0, //任意のマージン
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+      });
+
+      // 画像クリック時のイベント処理
+      var images = document.querySelectorAll('.p-idol-head__selector img');
+      for (var i = 0; i < images.length; i++) {
+        images[i].addEventListener('click', function () {
+          // クリックされた画像のインデックスを取得する
+          var index = Array.from(images).indexOf(this);
+
+          // Swiperを対応するスライドに切り替える
+          swiper.slideTo(index);
+        });
+      }
+
+    });
+  </script>
+
+</body>
+
+</html>
