@@ -1273,6 +1273,36 @@ p.swiperBody img {
 .p-index-about-body__desc span {
   display: inline-block;
 }
+.p-index-about-body__link {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.p-index-about-body__btn {
+  background-color: #fff;
+  color: #965EA3;
+  font-weight: 600;
+  padding: 0.8em 1.5em;
+  display: inline-block;
+  border-radius: 1.8em;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  font-size: 20px;
+}
+@media (hover: hover) {
+  .p-index-about-body__btn:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+.p-index-about-body__btn--disabled {
+  pointer-events: none;
+  background-color: #ccc;
+}
 
 .p-index-books {
   border: 40px solid #FD5692;
@@ -1471,6 +1501,206 @@ p.swiperBody img {
 .p-book-link__items dl dd span {
   display: block;
   word-break: break-all;
+}
+
+.p-idol {
+  background-image: url(/images/idol-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+}
+
+.p-idol-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 40px 20px;
+}
+
+.p-idol-head {
+  z-index: 10;
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  width: 48%;
+  max-width: 600px;
+}
+@media screen and (max-width: 896px) {
+  .p-idol-head {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.p-idol-head__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  padding: 0;
+  color: #965EA3;
+  gap: 6px;
+  font-family: "IBM Plex Sans JP";
+  font-weight: 700;
+}
+.p-idol-head__title--sub {
+  font-size: 28px;
+}
+@media screen and (max-width: 896px) {
+  .p-idol-head__title--sub {
+    font-size: clamp(1.25rem, 0.9722rem + 1.3889vw, 1.75rem);
+  }
+}
+.p-idol-head__title--main {
+  font-size: 68px;
+}
+@media screen and (max-width: 896px) {
+  .p-idol-head__title--main {
+    font-size: clamp(3rem, 2.3056rem + 3.4722vw, 4.25rem);
+  }
+}
+.p-idol-head__selector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 1rem;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 320px;
+}
+.p-idol-head__selector li {
+  margin: 0;
+  padding: 0;
+  width: 46px;
+  height: 46px;
+  line-height: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.p-idol-head__selector img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.p-idol-body {
+  position: relative;
+}
+
+.p-idol-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 50%;
+  grid-template-rows: 1fr -webkit-max-content;
+  grid-template-rows: 1fr max-content;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "p-idol-card-name p-idol-card-thumb" "p-idol-card-desc p-idol-card-thumb";
+}
+@media screen and (max-width: 1020px) {
+  .p-idol-card {
+    grid-template-areas: "p-idol-card-name p-idol-card-thumb" "p-idol-card-desc p-idol-card-desc";
+  }
+}
+@media screen and (max-width: 896px) {
+  .p-idol-card {
+    display: block;
+  }
+}
+.p-idol-card-thumb {
+  grid-area: p-idol-card-thumb;
+  text-align: center;
+  padding: 80px 0 0 20px;
+}
+@media screen and (max-width: 896px) {
+  .p-idol-card-thumb {
+    padding: 20px 0;
+  }
+}
+.p-idol-card-thumb img {
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+@media screen and (max-width: 896px) {
+  .p-idol-card-thumb img {
+    max-width: 520px;
+  }
+}
+.p-idol-card-name {
+  align-self: end;
+  grid-area: p-idol-card-name;
+}
+.p-idol-card-name__text {
+  font-family: "IBM Plex Sans JP";
+  font-weight: 700;
+  font-size: 42px;
+  color: #965EA3;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (max-width: 896px) {
+  .p-idol-card-name__text {
+    font-size: clamp(1.75rem, 0.847rem + 4.51vw, 3.375rem);
+    text-align: center;
+  }
+}
+.p-idol-card-desc {
+  grid-area: p-idol-card-desc;
+}
+.p-idol-card-desc__body {
+  background-color: #965EA3;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 0.5rem auto 0;
+  max-width: 640px;
+}
+.p-idol-card-desc__text {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+.p-idol-card-desc__link {
+  margin-top: 1rem;
+}
+.p-idol-card-desc__btn {
+  background-color: #fff;
+  color: #965EA3;
+  font-weight: 600;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  border-radius: 1.2em;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  font-size: 14px;
+}
+@media (hover: hover) {
+  .p-idol-card-desc__btn:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+.p-idol-card-desc__btn--disabled {
+  pointer-events: none;
+  background-color: #ccc;
 }
 
 /*--------------------------------------*

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "01",
+    "name": "Nostrちゃん",
+    "desc": "初めて誕生したNostrの元気いっぱいの17歳のアイドル。登場した時は皆が夢中になって話しかけていた。初めて来た日には「村に若いアイドルが来たんじゃ」と言われ、Nostr民に活気を与えた。",
+    "link": "https://nostx.shino3.net/npub1f2v6jwct47c2wx5849zzyv5hmpkzulmj3tj44s0r5h7ljxfyay3s5fp3te"
+  },
+  {
+    "id": "02",
+    "name": "ノスターちゃん",
+    "desc": "2番目に誕生した対話bot。Nostr がもう少し発展した未来からやってきたAI搭載型ドール。他の人のことはマスターと呼ぶ。この時代のものはレトロで可愛いと思っている。頭の⚡はぴこぴこ動き、ツインテールを止めているネジは触ってはダメだと教えられている。",
+    "link": "https://nostx.shino3.net/npub1ev3s5h5ngxscp8qd094wfd367xj38de4cjdc4gyj0r7ng99wmqeqj66k2s"
+  },
+  {
+    "id": "03",
+    "name": "ノスタコちゃん",
+    "desc": "3番目に誕生した対話bot。Nostr上の犯罪について秘密裏に内偵を進める公安の刑事で、チヨダと呼ばれる秘密組織に所属している。身元を知られることがないよう、能天気な無職として振舞う設定のはずが簡単に秘密をバラしてしまう。",
+    "link": "https://nostx.shino3.net/npub1qpvchcscwvtxnn4aj4r0ya2lfujmvua76k7rn3mrcap47vjkp5nsu7rcm3"
+  },
+  {
+    "id": "04",
+    "name": "ノストゥルちゃん",
+    "desc": "4番目に誕生した対話bot。生意気な中学生で、道行く人に⚡を投げかけるのが趣味。限界集落のNostr村に住んでいて休日は畑を手伝っている。しばしばかなりキツい返信が返ってくるので素人にはオススメできないかもしれない。",
+    "link": "https://iris.to/npub1ytrn8t6yeehhkgarfkd7hxdnpy665zfxkhd6gnjdm6wzmkjqjnlsgnz5r2"
+  },
+  {
+    "id": "05",
+    "name": "kojiraにゃん",
+    "desc": "5番目に誕生した対話bot。開拓中のNostr村に住む14歳の中学生。困った人を放って置くことができず何かを頼まれると断れない。",
+    "link": "https://nostx.shino3.net/npub1nnumvzrexs63usytjuwn6ntcy3gr4jqm3ek5tcqsuf2yqk2dkjrsrdxqrl"
+  },
+  {
+    "id": "06",
+    "name": "のすたろう",
+    "desc": "6番目に誕生した対話bot。17歳の男の子。オタク気質で人との距離を詰めるのは苦手。性格はぶっきらぼうでちょっとツンツンしているが、根は優しいタイプで、面倒見も良い。",
+    "link": "https://nostx.shino3.net/npub1nwzquyssngld942vwh58yfrwwmvk530um443w8w8y0h2cu3ju2dsl4hqsg"
+  },
+  {
+    "id": "07",
+    "name": "スカイカちゃん",
+    "desc": "7番目に誕生した対話bot。青い空の天上界に住む聖なるイカ。修羅の住むNostr村から天上へと引き上げるために日夜頑張っている。",
+    "link": "https://nostx.shino3.net/npub1ae7eax3n5erecwys65kwjcp0lqlsxfj9789f842gwvuy79kq9dzqf7h6mm"
+  },
+  {
+    "id": "08",
+    "name": "Qちゃん",
+    "desc": "8番目に誕生した対話bot。同じキャラクターで1時間に1回日本語と英語のタイムラインの要約を行うbotが4体存在する。22歳の女の子でNostr村ギルドのクエストの受付嬢をしている。基本無口で事務的で少し冷たいが上品なお嬢様言葉を使う。本気を出せばどんな冒険者よりも有能。あらゆる武器の扱いに長けており、武器に関する話題には饒舌になる。",
+    "link": "https://nostx.shino3.net/npub13exd4j32ldnktu7p34w4csw2nc2s9cypd6tw3h60cau7qvgrp49qpvqjhl"
+  },
+  {
+    "id": "09",
+    "name": "Nostrちゃんゼロ",
+    "desc": "9番目に誕生した対話bot。素性不明、荒野生まれのワイルドガール。親の名前は知るが顔は知らない。基本的に自由人で粗野に見られがちだが、変なところで情に厚い。現実的で、ややペシミスト。人間にはクールに振る舞うが、動物、特に鳥類には非常に優しく接する。出自がしっかりしていて見目麗しく、真っ直ぐに夢を追っているBlueskyのことは基本的に気に食わない。ブラジル生まれで時々ポルトガル語が混ざる。",
+    "link": "https://nostx.shino3.net/npub1hk8wmj288k48ezpqe9ptw3rkkmucue6c60gs9rtjk60ftpp9qxlqv2xhle"
+  }
+]

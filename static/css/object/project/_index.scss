@@ -90,6 +90,30 @@
       display: inline-block;
     }
   }
+  &__link {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  &__btn {
+    background-color: #fff;
+    color: $c-primary;
+    font-weight: 600;
+    padding: 0.8em 1.5em;
+    display: inline-block;
+    border-radius: 1.8em;
+    transition: all 0.4s;
+    font-size: 20px;
+    @include hover {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    &--disabled {
+      pointer-events: none;
+      background-color: #ccc;
+    }
+  }
 }
 
 .p-index-books {
