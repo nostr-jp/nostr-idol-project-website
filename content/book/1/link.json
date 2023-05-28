@@ -85,6 +85,16 @@
     "page": 61
   },
   {
+    "name": "手を動かして学ぶ Nostrプロトコル 演習環境",
+    "url": "https://github.com/nostr-jp/learn-nostr-by-crafting",
+    "page": 65
+  },
+  {
+    "name": "nostr-tools",
+    "url": "https://github.com/nbd-wtf/nostr-tools",
+    "page": 68
+  },
+  {
     "name": "Nostr.Band",
     "url": "https://nostr.band/",
     "page": 86
