@@ -55,7 +55,7 @@
     <div class="p-index-books">
       <h2 class="p-index-books__head">BOOKS</h2>
 
-      {{ $latest := first 1 .Site.RegularPages.ByDate.Reverse }}
+      {{ $latest := .Site.RegularPages.ByDate.Reverse }}
       {{ range $latest }}
       {{ $full_name := printf "/content%sspec.json" .RelPermalink }}
       {{ $data := getJSON $full_name }}
@@ -193,8 +193,8 @@
         </div>
       </div>
       {{end}}
+      {{end}}
     </div>
-    {{end}}
 
     {{ partial "site-footer.html" .}}
   </div>
@@ -208,7 +208,7 @@
       const openModalBtns = document.querySelectorAll(".modalOpen");
       // モーダルを閉じる
       const closeModalBtns = document.querySelectorAll(".modalClose");
-  
+
       // Swiperの設定
       const swiper = new Swiper(".swiper", {
         loop: true,
@@ -218,14 +218,14 @@
         },
         spaceBetween: 10, //任意のマージン
       });
-  
+
       // モーダルのボタンクリック
       openModalBtns.forEach((openModalBtn) => {
         openModalBtn.addEventListener("click", () => {
           modal.classList.add("is-active");
         });
       });
-  
+
       // モーダルの閉じるボタンクリック
       closeModalBtns.forEach((closeModalBtn) => {
         closeModalBtn.addEventListener("click", () => {
@@ -233,7 +233,7 @@
         });
       });
     });
-  
+
   </script>
 </body>
 
