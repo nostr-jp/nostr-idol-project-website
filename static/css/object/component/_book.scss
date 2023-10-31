@@ -2,14 +2,18 @@
 
 .c-book-block {
   max-width: 840px;
-  margin: 0 auto;
+  margin: 40px auto;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 40px;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
   @include bp(tab) {
     max-width: 480px;
     display: block;
+    padding: 15px;
   }
   &__cover {
     max-width: 320px;
