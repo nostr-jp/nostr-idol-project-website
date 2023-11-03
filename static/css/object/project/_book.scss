@@ -16,6 +16,17 @@
     padding: 40px 10px;
   }
 }
+.p-book-visual{
+  line-height: 0;
+  figure{
+    margin: 0;
+    padding: 0;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
 .p-book-link {
   padding: 0;
   margin: 40px 0 0 0;

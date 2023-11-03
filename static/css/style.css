@@ -572,15 +572,11 @@ a:active {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 40px;
-  padding: 40px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
 }
 @media screen and (max-width: 896px) {
   .c-book-block {
     max-width: 480px;
     display: block;
-    padding: 15px;
   }
 }
 .c-book-block__cover {
@@ -1431,6 +1427,16 @@ p.swiperBody img {
     font-size: 4rem;
   }
 }
+.p-index-books .c-book-block {
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+@media screen and (max-width: 896px) {
+  .p-index-books .c-book-block {
+    padding: 15px;
+  }
+}
 
 .p-error-content {
   background-image: url(/images/about-bg.svg);
@@ -1512,6 +1518,18 @@ p.swiperBody img {
     border-left: none;
     padding: 40px 10px;
   }
+}
+
+.p-book-visual {
+  line-height: 0;
+}
+.p-book-visual figure {
+  margin: 0;
+  padding: 0;
+}
+.p-book-visual figure img {
+  width: 100%;
+  height: auto;
 }
 
 .p-book-link {
