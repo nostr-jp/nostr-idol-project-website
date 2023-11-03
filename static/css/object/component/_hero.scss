@@ -1,0 +1,60 @@
+@use "../../foundation/global" as *;
+
+.c-hero-book1 {
+  height: 890px;
+  background-image: url(/images/visual.webp);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  @include bp(pc) {
+    background-image: url(/images/visual-mobile.webp);
+    background-size: cover;
+    height: auto;
+    padding-top: 180%;
+  }
+  &__first-copy {
+    padding: 0;
+    margin: 0;
+    width: 890px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include bp(pc) {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      transform: rotate(90deg) translate(0px, -100%);
+      transform-origin: left top;
+      @include bp(pc) {
+        transform: rotate(0) translate(0);
+      }
+    }
+  }
+  &__second-copy {
+    padding: 0;
+    margin: 0;
+    width: 890px;
+    position: absolute;
+    text-align: right;
+    right: 0;
+    top: 0;
+    @include bp(pc) {
+      width: 100%;
+      top: auto;
+      bottom: 7vw;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+      transform: rotate(270deg) translate(0px, -100%);
+      transform-origin: right top;
+      @include bp(pc) {
+        width: 90%;
+        transform-origin: center;
+        transform: rotate(-10deg) translate(0vw, 0px);
+      }
+    }
+  }
+}

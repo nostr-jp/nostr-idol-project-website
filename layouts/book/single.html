@@ -23,8 +23,19 @@
       </div>
 
     </div>
-
-    <div class="p-book-wrap">
+    {{if .Params.hero_pc}}
+    <div class="p-book-visual">
+      <figure>
+        <picture>
+          {{if .Params.hero_sp}}
+          <source media="(max-width: 780px)" srcset="/images/hero/{{$slug}}-sp.webp">
+          {{ end }}
+          <img src="/images/hero/{{$slug}}-pc.webp" alt="">
+        </picture>
+      </figure>
+    </div>
+    {{ end }}
+    <div class="p-book-wrap custom-border-color--primary">
       <div class="c-book-block">
         {{ $resource := .Resources.GetMatch "spec.json" }}
         {{if $resource}}
@@ -67,7 +78,7 @@
         <div class="c-book-block__info">
           <ul class="c-book-block__share">
             <li><a href="https://twitter.com/intent/tweet?text={{ $data.share_text }}{{ .Permalink }}"
-                target="_blank"><img src="/images/icon-twitter.svg" alt="Twitterでシェア"></a></li>
+                target="_blank"><img src="/images/icon-x.svg" alt="Xでシェア"></a></li>
             <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"><img
                   src="/images/icon-facebook.svg" alt="Facebookでシェア"></a></li>
           </ul>
@@ -78,10 +89,10 @@
           {{ end }}
           {{if $data.eventName}}
           <dl class="c-book-event">
-            <dt>
+            <dt class="custom-bg-color--primary">
               {{$data.eventName}}
             </dt>
-            <dd>
+            <dd class="custom-font-color--primary">
               {{$data.spaceNo}}
             </dd>
           </dl>
@@ -154,7 +165,7 @@
         {{ $resource := .Resources.GetMatch "index.json" }}
         {{if $resource}}
         <div class="c-book-index">
-          <h2 class="c-book-index__head">目次</h2>
+          <h2 class="c-book-index__head custom-font-color--primary">目次</h2>
           <div class="c-book-index__items">
             {{ $data := getJSON "content" $resource.RelPermalink }}
             {{ range $index := $data }}
@@ -174,11 +185,11 @@
         {{ $resource := .Resources.GetMatch "member.json" }}
         {{if $resource}}
         <div class="c-book-member">
-          <h2 class="c-book-member__head">書いた人たち</h2>
+          <h2 class="c-book-member__head custom-font-color--primary">書いた人たち</h2>
           <div class="c-book-member__items">
             {{ $data := getJSON "content" $resource.RelPermalink }}
             {{ range $members := $data }}
-            <h3 class="c-member-head">{{ $members.role }}</h3>
+            <h3 class="c-member-head custom-font-color--secondary">{{ $members.role }}</h3>
             <div class="c-member-wrap">
               {{ range $member := $members.member }}
               <div class="c-member-unit">
@@ -194,6 +205,11 @@
                   {{ else }}
                   <li>{{$member.url2}}</li>
                   {{ end }}
+                  {{ if (findRE "http.*" $member.url3) }}
+                  <li><a href="{{$member.url3}}" target="_blank">{{$member.url3}}</a></li>
+                  {{ else }}
+                  <li>{{$member.url3}}</li>
+                  {{ end }}
                 </ul>
               </div>
               {{ end }}
@@ -206,7 +222,7 @@
         {{ $resource := .Resources.GetMatch "link.json" }}
         {{if $resource}}
         <div class="p-book-link">
-          <h2 class="p-book-link__head">本誌内で紹介したサイト一覧</h2>
+          <h2 class="p-book-link__head custom-font-color--primary">本誌内で紹介したサイト一覧</h2>
           <div class="p-book-link__items">
             {{ $data := getJSON "content" $resource.RelPermalink }}
             {{ range $link := $data }}
@@ -224,7 +240,7 @@
         {{ $resource := .Resources.GetMatch "errata.json" }}
         {{if $resource}}
         <div class="c-book-errata">
-          <h2 class="c-book-errata__head">正誤情報</h2>
+          <h2 class="c-book-errata__head custom-font-color--primary">正誤情報</h2>
           <div class="c-book-errata__items">
             {{ $data := getJSON "content" $resource.RelPermalink }}
             {{ range $errata := $data }}
@@ -252,7 +268,7 @@
       const openModalBtns = document.querySelectorAll(".modalOpen");
       // モーダルを閉じる
       const closeModalBtns = document.querySelectorAll(".modalClose");
-  
+
       // Swiperの設定
       const swiper = new Swiper(".swiper", {
         loop: true,
@@ -262,14 +278,14 @@
         },
         spaceBetween: 10, //任意のマージン
       });
-  
+
       // モーダルのボタンクリック
       openModalBtns.forEach((openModalBtn) => {
         openModalBtn.addEventListener("click", () => {
           modal.classList.add("is-active");
         });
       });
-  
+
       // モーダルの閉じるボタンクリック
       closeModalBtns.forEach((closeModalBtn) => {
         closeModalBtn.addEventListener("click", () => {
@@ -277,8 +293,10 @@
         });
       });
     });
-  
+
   </script>
+
+  {{ partial "single-custom-color.html" .}}
 
 </body>
 

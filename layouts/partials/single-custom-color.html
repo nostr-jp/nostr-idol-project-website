@@ -1,0 +1,25 @@
+<style>
+  {{if .Params.color_primary}}
+  .custom-border-color--primary {
+    border-color: {{.Params.color_primary}}!important;
+  }
+  .custom-font-color--primary {
+    color: {{.Params.color_primary}}!important;
+  }
+  .custom-bg-color--primary {
+    background-color: {{.Params.color_primary}}!important;
+  }
+  {{end}}
+  {{if .Params.color_secondary}}
+  .custom-border-color--secondary {
+    border-color: {{.Params.color_secondary}}!important;
+  }
+  .custom-font-color--secondary {
+    color: {{.Params.color_secondary}}!important;
+  }
+  .custom-bg-color--secondary {
+    background-color: {{.Params.color_secondary}}!important;
+  }
+  {{end}}
+
+</style>

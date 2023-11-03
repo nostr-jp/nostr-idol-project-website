@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*--------------------------------------*
+ * foundation
+ *--------------------------------------*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -399,6 +402,9 @@ a:active {
   border: 0 !important;
 }
 
+/*--------------------------------------*
+ * layout
+ *--------------------------------------*/
 .l-page-wrap {
   background-color: #FFD606;
 }
@@ -551,9 +557,12 @@ a:active {
   text-decoration: none;
 }
 
+/*-------------------
+ * component
+ *-------------------*/
 .c-book-block {
   max-width: 840px;
-  margin: 0 auto;
+  margin: 40px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1161,6 +1170,85 @@ p.swiperBody img {
   color: #1a0dab;
 }
 
+.c-hero-book1 {
+  height: 890px;
+  background-image: url(/images/visual.webp);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 1080px) {
+  .c-hero-book1 {
+    background-image: url(/images/visual-mobile.webp);
+    background-size: cover;
+    height: auto;
+    padding-top: 180%;
+  }
+}
+.c-hero-book1__first-copy {
+  padding: 0;
+  margin: 0;
+  width: 890px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media screen and (max-width: 1080px) {
+  .c-hero-book1__first-copy {
+    width: 100%;
+  }
+}
+.c-hero-book1__first-copy img {
+  width: 100%;
+  -webkit-transform: rotate(90deg) translate(0px, -100%);
+          transform: rotate(90deg) translate(0px, -100%);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+}
+@media screen and (max-width: 1080px) {
+  .c-hero-book1__first-copy img {
+    -webkit-transform: rotate(0) translate(0);
+            transform: rotate(0) translate(0);
+  }
+}
+.c-hero-book1__second-copy {
+  padding: 0;
+  margin: 0;
+  width: 890px;
+  position: absolute;
+  text-align: right;
+  right: 0;
+  top: 0;
+}
+@media screen and (max-width: 1080px) {
+  .c-hero-book1__second-copy {
+    width: 100%;
+    top: auto;
+    bottom: 7vw;
+    text-align: center;
+  }
+}
+.c-hero-book1__second-copy img {
+  width: 100%;
+  -webkit-transform: rotate(270deg) translate(0px, -100%);
+          transform: rotate(270deg) translate(0px, -100%);
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+}
+@media screen and (max-width: 1080px) {
+  .c-hero-book1__second-copy img {
+    width: 90%;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(-10deg) translate(0vw, 0px);
+            transform: rotate(-10deg) translate(0vw, 0px);
+  }
+}
+
+/*-------------------
+ * project
+ *-------------------*/
 .p-index-hero {
   height: 890px;
   background-image: url(/images/visual.webp);
@@ -1339,6 +1427,16 @@ p.swiperBody img {
     font-size: 4rem;
   }
 }
+.p-index-books .c-book-block {
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+@media screen and (max-width: 896px) {
+  .p-index-books .c-book-block {
+    padding: 15px;
+  }
+}
 
 .p-error-content {
   background-image: url(/images/about-bg.svg);
@@ -1420,6 +1518,18 @@ p.swiperBody img {
     border-left: none;
     padding: 40px 10px;
   }
+}
+
+.p-book-visual {
+  line-height: 0;
+}
+.p-book-visual figure {
+  margin: 0;
+  padding: 0;
+}
+.p-book-visual figure img {
+  width: 100%;
+  height: auto;
 }
 
 .p-book-link {
@@ -1703,18 +1813,6 @@ p.swiperBody img {
   background-color: #ccc;
 }
 
-/*--------------------------------------*
- * foundation
- *--------------------------------------*/
-/*--------------------------------------*
- * layout
- *--------------------------------------*/
-/*-------------------
- * component
- *-------------------*/
-/*-------------------
- * project
- *-------------------*/
 /*-------------------
  * object
  *-------------------*//*# sourceMappingURL=style.css.map */

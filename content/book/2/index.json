@@ -1,0 +1,37 @@
+[
+  {
+    "section": "Developerサイド：Hello,Nostr!",
+    "contents": [
+      "NIP-01を読む（2023年秋）",
+      "Nostrとは何なのか？",
+      "自分で育てる Nostr リレーサーバ",
+      "Nostr リレーを活用したデータ保存（NIP-78）",
+      "「Nos本演習でbotとツールを作った話」",
+      "「パブチャへおいでよ！Come on a うにゅうハウス」～Nostrのパブリックチャットについて～",
+      "演習！作ってみよう「日本語TLのぞき窓」",
+      "やる夫botを作ってみた",
+      "ラズパイで簡単！ 一家に一台 おうちNostrリレー"
+    ]
+  },
+  {
+    "section": "Developerサイド：ひとやすみ",
+    "contents": ["継続的な勉強会開催には何が必要か語り合ってみた！"]
+  },
+  {
+    "section": "Developerサイド：Yo Bluesky!",
+    "contents": [
+      "Bluesky のアーキテクチャとフェデレーションへの展望",
+      "ai bot",
+      "gihyo.jpにBluesky記事が載るまでの5日間～分散型SNSドリブンのコンテンツ生成の話",
+      "わしはワイ推し Vyvyan von Nachthafen"
+    ]
+  },
+  {
+    "section": "Comic&Artサイド",
+    "contents": [
+      "NostrちゃんとBlueskyちゃん",
+      "YUI",
+      "イラストギャラリー"
+    ]
+  }
+]

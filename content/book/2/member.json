@@ -1,0 +1,198 @@
+[
+	{
+		"role": "プロデューサー/ライター",
+		"member": [
+			{
+				"name": "Shino3",
+				"url1": "[Nostr]_@shino3.net",
+				"url2": "[Bluesky]@shino3.net",
+				"url3": ""
+			}
+		]
+	},
+	{
+		"role": "ライター/イラストレーター",
+		"member": [
+			{
+				"name": "ひゅうが霄",
+				"url1": "[Nostr]showV3@showhyuga.pages.dev",
+				"url2": "[Bluesky]@showv3.bsky.social",
+				"url3": "https://showhyuga.blogspot.com/"
+			},
+			{
+				"name": "みりめい",
+				"url1": "[Nostr]kawaiirailroads@millie-may.net",
+				"url2": "[Bluesky]@kawaiirailroads.millie-may.net",
+				"url3": "https://millie-may.net"
+			},
+			{
+				"name": "syui",
+				"url1": "[Nostr]_@syui.ai",
+				"url2": "[Bluesky]@syui.ai",
+				"url3": "https://syui.ai"
+			}
+		]
+	},
+	{
+		"role": "ライター",
+		"member": [
+			{
+				"name": "mattn",
+				"url1": "[Nostr]_@compile-error.net",
+				"url2": "[Bluesky]@mattn.bsky.social",
+				"url3": "https://mattn.kaoriya.net"
+			},
+			{
+				"name": "darashi",
+				"url1": "[Nostr]_@darashi.net",
+				"url2": "[Bluesky]@darashi.bsky.social",
+				"url3": "https://darashi.net"
+			},
+			{
+				"name": "Henoya",
+				"url1": "",
+				"url2": "[Bluesky]@henoya.com",
+				"url3": "https://henoya.com"
+			},
+			{
+				"name": "電子馬",
+				"url1": "[Nostr]_@erechorse.com",
+				"url2": "[Bluesky]@erechorse.com",
+				"url3": "https://erechorse.com"
+			},
+			{
+				"name": "馮富久",
+				"url1": "",
+				"url2": "[Bluesky]@tomihisa.bsky.social",
+				"url3": "https://twitter.com/tomihisa"
+			},
+			{
+				"name": "発火大根",
+				"url1": "[Nostr]hakkadaikon@iris.to",
+				"url2": "[Bluesky]@hakkadaikon.bsky.social",
+				"url3": ""
+			},
+			{
+				"name": "かすてらふぃ",
+				"url1": "[Nostr]jiftechnify@c-stellar.net",
+				"url2": "[Bluesky]@c-stellar.net",
+				"url3": "https://c-stellar.net"
+			},
+			{
+				"name": "Nighthaven",
+				"url1": "[Nostr]nighthaven@iris.to",
+				"url2": "[Bluesky]@moja.blue",
+				"url3": "https://sites.google.com/view/nightaven/"
+			}
+		]
+	},
+	{
+		"role": "イラストレーター",
+		"member": [
+			{
+				"name": "崇徳",
+				"url1": "[Nostr]_@stok33.github.io",
+				"url2": "[Bluesky]@stok33.bsky.social",
+				"url3": "https://stok33.github.io/"
+			},
+			{
+				"name": "たーごいる",
+				"url1": "[Nostr]@targoyle.jp",
+				"url2": "[Bluesky]@targoyle.jp",
+				"url3": "https://targoyle.jp/"
+			},
+			{
+				"name": "umo",
+				"url1": "",
+				"url2": "[Bluesky]@umo.bsky.social",
+				"url3": "https://nook.red/"
+			},
+			{
+				"name": "たんぐれー",
+				"url1": "[Nostr]npub1spymcgjkmznrwx5wqpft06ygkz2dm0zphedhj6mwuk28hy9l35aqwzd0c0",
+				"url2": "[Bluesky]@tangure.bsky.social",
+				"url3": "https://www.pixiv.net/users/14865321"
+			},
+			{
+				"name": "Alcali",
+				"url1": "",
+				"url2": "[Bluesky]@alkali.bsky.social",
+				"url3": "https://alcali.theblog.me/"
+			},
+			{
+				"name": "黒田",
+				"url1": "[Nostr]krdrailway@gijirail.com",
+				"url2": "[Bluesky]@krdrailway.gijirail.com",
+				"url3": "https://gijirail.com/"
+			},
+			{
+				"name": "逆砂 参角",
+				"url1": "[Nostr]invertedtriangle@nostrplebs.com",
+				"url2": "",
+				"url3": ""
+			},
+			{
+				"name": "しおん",
+				"url1": "[Nostr]nostr-shion72.pages.dev",
+				"url2": "[Bluesky]@shion72.bsky.social",
+				"url3": "https://potofu.me/shion72"
+			}
+		]
+	},
+	{
+		"role": "Webサイト",
+		"member": [
+			{
+				"name": "クコ",
+				"url1": "[Nostr]cuconoki@cuconoki.net",
+				"url2": "[Bluesky]@cuconoki.net",
+				"url3": "https://cuconoki.net/"
+			}
+		]
+	},
+	{
+		"role": "デザイナー/DTP/編集",
+		"member": [
+			{
+				"name": "よそいち",
+				"url1": "[Nostr]yosoichi@sksksketch.net",
+				"url2": "[Bluesky]@sksksketch.net",
+				"url3": "https://sksksketch.net/"
+			}
+		]
+	},
+	{
+		"role": "マネージャー",
+		"member": [
+			{
+				"name": "Hima",
+				"url1": "",
+				"url2": "[Bluesky]@hima.bsky.social",
+				"url3": "https://sites.google.com/view/himazinn"
+			},
+			{
+				"name": "りら",
+				"url1": "[Nostr]rira224@rira224.github.io",
+				"url2": "[Bluesky]@rira224.bsky.social",
+				"url3": "https://rira224.github.io/"
+			}
+		]
+	},
+	{
+		"role": "アドバイザー",
+		"member": [
+			{
+				"name": "kojira",
+				"url1": "[Nostr]kojira@kojira.io",
+				"url2": "[Bluesky]@kojira.io",
+				"url3": "https://github.com/kojira"
+			},
+			{
+				"name": "つるるん",
+				"url1": "[Nostr]_@ROBO358.com",
+				"url2": "[Bluesky]@robo358.com",
+				"url3": "https://ROBO358.com/"
+			}
+		]
+	}
+]
