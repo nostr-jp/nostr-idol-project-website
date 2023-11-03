@@ -112,15 +112,15 @@
             </a>
           </h1>
           {{ end }}
-          {{if $data.eventName}}
-          <dl class="c-book-event">
-            <dt>
-              {{$data.eventName}}
-            </dt>
-            <dd>
-              {{$data.spaceNo}}
-            </dd>
-          </dl>
+          {{ range $event := $data.events }}
+            <dl class="c-book-event">
+              <dt class="custom-bg-color--primary">
+                {{$event.eventName}}
+              </dt>
+              <dd class="custom-font-color--primary">
+                {{$event.spaceNo}}
+              </dd>
+            </dl>
           {{ end }}
           {{if $data.price}}
           <dl class="c-book-price">
@@ -128,7 +128,11 @@
               頒布価格
             </dt>
             <dd>
+              {{if $data.price}}
               ￥{{$data.price}}
+              {{else}}
+              販売終了
+              {{end}}
             </dd>
           </dl>
           {{ end }}
@@ -148,7 +152,11 @@
               電子版＋紙
             </dt>
             <dd>
+              {{if $data.online_set_price}}
               ￥{{$data.online_set_price}}
+              {{else}}
+              販売終了
+              {{end}}
             </dd>
           </dl>
           {{ end }}
