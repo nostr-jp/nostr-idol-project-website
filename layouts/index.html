@@ -55,7 +55,7 @@
     <div class="p-index-books">
       <h2 class="p-index-books__head">BOOKS</h2>
 
-      {{ $latest := first 1 .Site.RegularPages.ByDate.Reverse }}
+      {{ $latest := .Site.RegularPages.ByDate.Reverse }}
       {{ range $latest }}
       {{ $full_name := printf "/content%sspec.json" .RelPermalink }}
       {{ $data := getJSON $full_name }}
@@ -68,15 +68,15 @@
 
           {{if $data.samplePage}}
           <div class="swiperModalButton">
-            <button class="modalOpen">紙面サンプル</button>
+            <button class="modalOpen" data-target="modal{{$slug}}">紙面サンプル</button>
           </div>
 
           <!-- モーダル -->
-          <div class="modal" id="modal">
-            <div class="modal__overlay modalClose"></div>
+          <div class="modal" id="modal{{$slug}}">
+            <div class="modal__overlay modalClose" data-target="modal{{$slug}}"></div>
             <div class="modal__content">
               <div class="modal_inner">
-                <div class="modal__close-btn modalClose" aria-label="閉じる"><span class="lineClose"></span></div>
+                <div class="modal__close-btn modalClose" aria-label="閉じる" data-target="modal{{$slug}}"><span class="lineClose"></span></div>
                 <!-- スライダー -->
                 <div class="swiper modalInSlider">
                   <div class="swiper-wrapper">
@@ -101,7 +101,7 @@
         <div class="c-book-block__info">
           <ul class="c-book-block__share">
             <li><a href="https://twitter.com/intent/tweet?text={{ $data.share_text }}{{ .Permalink }}"
-                target="_blank"><img src="/images/icon-twitter.svg" alt="Twitterでシェア"></a></li>
+                target="_blank"><img src="/images/icon-x.svg" alt="Xでシェア"></a></li>
             <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"><img
                   src="/images/icon-facebook.svg" alt="Facebookでシェア"></a></li>
           </ul>
@@ -112,15 +112,15 @@
             </a>
           </h1>
           {{ end }}
-          {{if $data.eventName}}
-          <dl class="c-book-event">
-            <dt>
-              {{$data.eventName}}
-            </dt>
-            <dd>
-              {{$data.spaceNo}}
-            </dd>
-          </dl>
+          {{ range $event := $data.events }}
+            <dl class="c-book-event">
+              <dt class="custom-bg-color--primary">
+                {{$event.eventName}}
+              </dt>
+              <dd class="custom-font-color--primary">
+                {{$event.spaceNo}}
+              </dd>
+            </dl>
           {{ end }}
           {{if $data.price}}
           <dl class="c-book-price">
@@ -128,7 +128,11 @@
               頒布価格
             </dt>
             <dd>
+              {{if $data.price}}
               ￥{{$data.price}}
+              {{else}}
+              販売終了
+              {{end}}
             </dd>
           </dl>
           {{ end }}
@@ -148,7 +152,11 @@
               電子版＋紙
             </dt>
             <dd>
+              {{if $data.online_set_price}}
               ￥{{$data.online_set_price}}
+              {{else}}
+              販売終了
+              {{end}}
             </dd>
           </dl>
           {{ end }}
@@ -193,8 +201,8 @@
         </div>
       </div>
       {{end}}
+      {{end}}
     </div>
-    {{end}}
 
     {{ partial "site-footer.html" .}}
   </div>
@@ -208,7 +216,7 @@
       const openModalBtns = document.querySelectorAll(".modalOpen");
       // モーダルを閉じる
       const closeModalBtns = document.querySelectorAll(".modalClose");
-  
+
       // Swiperの設定
       const swiper = new Swiper(".swiper", {
         loop: true,
@@ -218,22 +226,26 @@
         },
         spaceBetween: 10, //任意のマージン
       });
-  
+
       // モーダルのボタンクリック
       openModalBtns.forEach((openModalBtn) => {
-        openModalBtn.addEventListener("click", () => {
+        openModalBtn.addEventListener("click", (e) => {
+          const targetID = e.target.dataset.target;
+          const modal = document.getElementById(targetID);
           modal.classList.add("is-active");
         });
       });
-  
+
       // モーダルの閉じるボタンクリック
       closeModalBtns.forEach((closeModalBtn) => {
-        closeModalBtn.addEventListener("click", () => {
+        closeModalBtn.addEventListener("click", (e) => {
+          const targetID = e.target.dataset.target;
+          const modal = document.getElementById(targetID);
           modal.classList.remove("is-active");
         });
       });
     });
-  
+
   </script>
 </body>
 

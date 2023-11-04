@@ -1,8 +1,16 @@
 {
   "title": "Hello Nostr!\n先住民が教えるNostrの歩き方",
   "share_text": "Hello Nostr!先住民が教えるNostrの歩き方\n",
-  "eventName": "技術書典14",
-  "spaceNo": "う18",
+  "events": [
+    {
+      "eventName": "技術書典15",
+      "spaceNo": "あ05"
+    },
+    {
+      "eventName": "技術書典14",
+      "spaceNo": "う18"
+    }
+  ],
   "price": "1,500",
   "online_price": "1,000",
   "online_set_price": "1,500",

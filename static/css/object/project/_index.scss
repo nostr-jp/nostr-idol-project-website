@@ -143,4 +143,12 @@
       font-size: 4rem;
     }
   }
+  .c-book-block {
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    @include bp(tab) {
+      padding: 15px;
+    }
+  }
 }
